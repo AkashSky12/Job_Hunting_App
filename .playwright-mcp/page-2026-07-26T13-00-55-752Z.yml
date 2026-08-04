@@ -1,0 +1,1312 @@
+- generic [ref=f4e2]:
+  - complementary [ref=f4e3]:
+    - generic [ref=f4e4]:
+      - generic [ref=f4e5]: JH
+      - generic [ref=f4e6]:
+        - generic [ref=f4e7]: Job Hunter
+        - text: AI powered
+    - navigation [ref=f4e8]:
+      - button "◵ Overview" [ref=f4e9] [cursor=pointer]:
+        - generic [ref=f4e10]: ◵
+        - text: Overview
+      - button "✦ Matches" [active] [ref=f4e11] [cursor=pointer]:
+        - generic [ref=f4e12]: ✦
+        - text: Matches
+      - button "▤ Applications" [ref=f4e13] [cursor=pointer]:
+        - generic [ref=f4e14]: ▤
+        - text: Applications
+      - button "✉ Inbox" [ref=f4e15] [cursor=pointer]:
+        - generic [ref=f4e16]: ✉
+        - text: Inbox
+      - button "⌗ Sources" [ref=f4e17] [cursor=pointer]:
+        - generic [ref=f4e18]: ⌗
+        - text: Sources
+      - button "◉ Profile" [ref=f4e19] [cursor=pointer]:
+        - generic [ref=f4e20]: ◉
+        - text: Profile
+    - generic [ref=f4e21]: "AI: fallback"
+  - main [ref=f4e24]:
+    - generic [ref=f4e25]:
+      - heading "Matches" [level=1] [ref=f4e75]
+      - generic [ref=f4e27]:
+        - button "Search ⌘K" [ref=f4e28] [cursor=pointer]:
+          - generic [ref=f4e29]: Search
+          - generic [ref=f4e30]: ⌘K
+        - button "Ingest jobs" [ref=f4e31] [cursor=pointer]
+        - button "Run matching" [ref=f4e32] [cursor=pointer]
+    - generic [ref=f4e77]:
+      - generic [ref=f4e78]:
+        - generic [ref=f4e79]:
+          - generic [ref=f4e80]:
+            - generic [ref=f4e81]: LE
+            - generic [ref=f4e82]:
+              - heading "Senior DevOps Engineer" [level=3] [ref=f4e83]
+              - paragraph [ref=f4e84]: Lemon.io · Americas, Europe, Asia, Africa, Oceania
+          - generic [ref=f4e85]: 23%
+        - paragraph [ref=f4e88]: Strong overlap on aws, kubernetes, llm, machine learning, python, react. Estimated fit 23%.
+        - generic [ref=f4e89]:
+          - button "Auto-apply" [ref=f4e90] [cursor=pointer]
+          - link "View" [ref=f4e91] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/devops/senior-devops-engineer-2091067
+      - generic [ref=f4e92]:
+        - generic [ref=f4e93]:
+          - generic [ref=f4e94]:
+            - generic [ref=f4e95]: LE
+            - generic [ref=f4e96]:
+              - heading "Senior AI Engineer" [level=3] [ref=f4e97]
+              - paragraph [ref=f4e98]: Lemon.io · Northern America, LATAM, Europe, APAC
+          - generic [ref=f4e99]: 20%
+        - paragraph [ref=f4e102]: Strong overlap on llm, machine learning, python, react, typescript. Estimated fit 20%.
+        - generic [ref=f4e103]:
+          - button "Auto-apply" [ref=f4e104] [cursor=pointer]
+          - link "View" [ref=f4e105] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/artificial-intelligence/senior-ai-engineer-2090986
+      - generic [ref=f4e106]:
+        - generic [ref=f4e107]:
+          - generic [ref=f4e108]:
+            - generic [ref=f4e109]: LE
+            - generic [ref=f4e110]:
+              - heading "Senior Product Manager" [level=3] [ref=f4e111]
+              - paragraph [ref=f4e112]: Lemon.io · Americas, Europe, Asia, Oceania
+          - generic [ref=f4e113]: 19%
+        - paragraph [ref=f4e116]: Strong overlap on llm, machine learning, python, react, typescript. Estimated fit 19%.
+        - generic [ref=f4e117]:
+          - button "Auto-apply" [ref=f4e118] [cursor=pointer]
+          - link "View" [ref=f4e119] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/product/senior-product-manager-2090984
+      - generic [ref=f4e120]:
+        - generic [ref=f4e121]:
+          - generic [ref=f4e122]:
+            - generic [ref=f4e123]: MI
+            - generic [ref=f4e124]:
+              - heading "Tech Lead Full-Stack Rails Engineer" [level=3] [ref=f4e125]
+              - paragraph [ref=f4e126]: Mitre Media · USA, Canada, USA timezones
+          - generic [ref=f4e127]: 9%
+        - paragraph [ref=f4e130]: Strong overlap on docker, kubernetes, llm, postgres, react, sql. Estimated fit 9%.
+        - generic [ref=f4e131]:
+          - button "Auto-apply" [ref=f4e132] [cursor=pointer]
+          - link "View" [ref=f4e133] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/software-development/tech-lead-full-stack-rails-engineer-2069746
+      - generic [ref=f4e134]:
+        - generic [ref=f4e135]:
+          - generic [ref=f4e136]:
+            - generic [ref=f4e137]: TO
+            - generic [ref=f4e138]:
+              - heading "ADVPL JÃºnior" [level=3] [ref=f4e139]
+              - paragraph [ref=f4e140]: TOTVS · Brasil,
+          - generic [ref=f4e141]: 6%
+        - paragraph [ref=f4e144]: Strong overlap on docker, python, sql, typescript. Estimated fit 6%.
+        - generic [ref=f4e145]:
+          - button "Auto-apply" [ref=f4e146] [cursor=pointer]
+          - link "View" [ref=f4e147] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-advpl-junior-totvs-1135333
+          - generic [ref=f4e148]: interview
+      - generic [ref=f4e149]:
+        - generic [ref=f4e150]:
+          - generic [ref=f4e151]:
+            - generic [ref=f4e152]: A.
+            - generic [ref=f4e153]:
+              - heading "Senior Independent AI Engineer / Architect" [level=3] [ref=f4e154]
+              - paragraph [ref=f4e155]: A.Team · Americas, Europe, Israel
+          - generic [ref=f4e156]: 6%
+        - paragraph [ref=f4e159]: Strong overlap on llm, machine learning. Estimated fit 6%.
+        - generic [ref=f4e160]:
+          - button "Auto-apply" [ref=f4e161] [cursor=pointer]
+          - link "View" [ref=f4e162] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/software-development/senior-independent-ai-engineer-architect-1919266
+      - generic [ref=f4e163]:
+        - generic [ref=f4e164]:
+          - generic [ref=f4e165]:
+            - generic [ref=f4e166]: ME
+            - generic [ref=f4e167]:
+              - heading "Analista de Infraestrutura Pleno DevOps" [level=3] [ref=f4e168]
+              - paragraph [ref=f4e169]: Melhor Envio · Brasil,
+          - generic [ref=f4e170]: 6%
+        - paragraph [ref=f4e173]: Strong overlap on docker, python, sql, typescript. Estimated fit 6%.
+        - generic [ref=f4e174]:
+          - button "Auto-apply" [ref=f4e175] [cursor=pointer]
+          - link "View" [ref=f4e176] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-analista-de-infraestrutura-pleno-devops-melhor-envio-1135334
+      - generic [ref=f4e177]:
+        - generic [ref=f4e178]:
+          - generic [ref=f4e179]:
+            - generic [ref=f4e180]: SP
+            - generic [ref=f4e181]:
+              - heading "Suporte N1 REMOTO" [level=3] [ref=f4e182]
+              - paragraph [ref=f4e183]: Spread Tecnologia · Brasil,
+          - generic [ref=f4e184]: 6%
+        - paragraph [ref=f4e187]: Strong overlap on docker, python, sql, typescript. Estimated fit 6%.
+        - generic [ref=f4e188]:
+          - button "Auto-apply" [ref=f4e189] [cursor=pointer]
+          - link "View" [ref=f4e190] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-suporte-n1-remoto-spread-tecnologia-1135332
+      - generic [ref=f4e191]:
+        - generic [ref=f4e192]:
+          - generic [ref=f4e193]:
+            - generic [ref=f4e194]: CL
+            - generic [ref=f4e195]:
+              - heading "Senior Product Engineer (Fullstack)" [level=3] [ref=f4e196]
+              - paragraph [ref=f4e197]: Clipster · Europe, UK, Germany, France, European timezones
+          - generic [ref=f4e198]: 6%
+        - paragraph [ref=f4e201]: Strong overlap on postgres, react, sql. Estimated fit 6%.
+        - generic [ref=f4e202]:
+          - button "Auto-apply" [ref=f4e203] [cursor=pointer]
+          - link "View" [ref=f4e204] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/software-development/senior-product-engineer-fullstack-2091062
+      - generic [ref=f4e205]:
+        - generic [ref=f4e206]:
+          - generic [ref=f4e207]:
+            - generic [ref=f4e208]: UB
+            - generic [ref=f4e209]:
+              - heading "Junior Procurement Specialist" [level=3] [ref=f4e210]
+              - paragraph [ref=f4e211]: UBQ.io · EspaÃ±a,
+          - generic [ref=f4e212]: 6%
+        - paragraph [ref=f4e215]: Strong overlap on python. Estimated fit 6%.
+        - generic [ref=f4e216]:
+          - button "Auto-apply" [ref=f4e217] [cursor=pointer]
+          - link "View" [ref=f4e218] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-junior-procurement-specialist-ubq-io-1135329
+      - generic [ref=f4e219]:
+        - generic [ref=f4e220]:
+          - generic [ref=f4e221]:
+            - generic [ref=f4e222]: GE
+            - generic [ref=f4e223]:
+              - heading "Performance Marketing Lead" [level=3] [ref=f4e224]
+              - paragraph [ref=f4e225]: Get In Good Nick · UK
+          - generic [ref=f4e226]: 5%
+        - paragraph [ref=f4e229]: Strong overlap on python. Estimated fit 5%.
+        - generic [ref=f4e230]:
+          - button "Auto-apply" [ref=f4e231] [cursor=pointer]
+          - link "View" [ref=f4e232] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-performance-marketing-lead-get-in-good-nick-1135323
+      - generic [ref=f4e233]:
+        - generic [ref=f4e234]:
+          - generic [ref=f4e235]:
+            - generic [ref=f4e236]: WO
+            - generic [ref=f4e237]:
+              - heading "Compliance Administrator" [level=3] [ref=f4e238]
+              - paragraph [ref=f4e239]: Work Force Nexus · United Kingdom,
+          - generic [ref=f4e240]: 4%
+        - paragraph [ref=f4e243]: Strong overlap on python. Estimated fit 4%.
+        - generic [ref=f4e244]:
+          - button "Auto-apply" [ref=f4e245] [cursor=pointer]
+          - link "View" [ref=f4e246] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-compliance-administrator-work-force-nexus-1135325
+      - generic [ref=f4e247]:
+        - generic [ref=f4e248]:
+          - generic [ref=f4e249]:
+            - generic [ref=f4e250]: TE
+            - generic [ref=f4e251]:
+              - heading "Online Data Analyst Canada (French Language) (C)" [level=3] [ref=f4e252]
+              - paragraph [ref=f4e253]: TELUS Digital · Canada
+          - generic [ref=f4e254]: 4%
+        - paragraph [ref=f4e257]: Strong overlap on machine learning. Estimated fit 4%.
+        - generic [ref=f4e258]:
+          - button "Auto-apply" [ref=f4e259] [cursor=pointer]
+          - link "View" [ref=f4e260] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/all-others/online-data-analyst-canada-french-language-c-2091047
+      - generic [ref=f4e261]:
+        - generic [ref=f4e262]:
+          - generic [ref=f4e263]:
+            - generic [ref=f4e264]: EV
+            - generic [ref=f4e265]:
+              - heading "Mid/Senior AI Cinematic Video Editor" [level=3] [ref=f4e266]
+              - paragraph [ref=f4e267]: EverAI · Worldwide
+          - generic [ref=f4e268]: 3%
+        - paragraph [ref=f4e271]: Strong overlap on aws, llm. Estimated fit 3%.
+        - generic [ref=f4e272]:
+          - button "Auto-apply" [ref=f4e273] [cursor=pointer]
+          - link "View" [ref=f4e274] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/artificial-intelligence/mid-senior-ai-cinematic-video-editor-2091035
+      - generic [ref=f4e275]:
+        - generic [ref=f4e276]:
+          - generic [ref=f4e277]:
+            - generic [ref=f4e278]: LA
+            - generic [ref=f4e279]:
+              - heading "Staff Product Engineer (Montevideo)" [level=3] [ref=f4e280]
+              - paragraph [ref=f4e281]: LawnStarter · Uruguay
+          - generic [ref=f4e282]: 3%
+        - paragraph [ref=f4e285]: Strong overlap on aws, react, typescript. Estimated fit 3%.
+        - generic [ref=f4e286]:
+          - button "Auto-apply" [ref=f4e287] [cursor=pointer]
+          - link "View" [ref=f4e288] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/product/staff-product-engineer-montevideo-2091054
+      - generic [ref=f4e289]:
+        - generic [ref=f4e290]:
+          - generic [ref=f4e291]:
+            - generic [ref=f4e292]: LA
+            - generic [ref=f4e293]:
+              - heading "Staff Software Engineer, Product (Montevideo)" [level=3] [ref=f4e294]
+              - paragraph [ref=f4e295]: LawnStarter · Uruguay
+          - generic [ref=f4e296]: 3%
+        - paragraph [ref=f4e299]: Strong overlap on aws, react, typescript. Estimated fit 3%.
+        - generic [ref=f4e300]:
+          - button "Auto-apply" [ref=f4e301] [cursor=pointer]
+          - link "View" [ref=f4e302] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/software-development/staff-software-engineer-product-montevideo-2091058
+      - generic [ref=f4e303]:
+        - generic [ref=f4e304]:
+          - generic [ref=f4e305]:
+            - generic [ref=f4e306]: LA
+            - generic [ref=f4e307]:
+              - heading "Staff Product Engineer (Campinas)" [level=3] [ref=f4e308]
+              - paragraph [ref=f4e309]: LawnStarter · Brazil
+          - generic [ref=f4e310]: 3%
+        - paragraph [ref=f4e313]: Strong overlap on aws, react, typescript. Estimated fit 3%.
+        - generic [ref=f4e314]:
+          - button "Auto-apply" [ref=f4e315] [cursor=pointer]
+          - link "View" [ref=f4e316] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/product/staff-product-engineer-campinas-2091053
+      - generic [ref=f4e317]:
+        - generic [ref=f4e318]:
+          - generic [ref=f4e319]:
+            - generic [ref=f4e320]: LA
+            - generic [ref=f4e321]:
+              - heading "Staff Software Engineer, Product (Campinas)" [level=3] [ref=f4e322]
+              - paragraph [ref=f4e323]: LawnStarter · Brazil
+          - generic [ref=f4e324]: 3%
+        - paragraph [ref=f4e327]: Strong overlap on aws, react, typescript. Estimated fit 3%.
+        - generic [ref=f4e328]:
+          - button "Auto-apply" [ref=f4e329] [cursor=pointer]
+          - link "View" [ref=f4e330] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/software-development/staff-software-engineer-product-campinas-2091049
+      - generic [ref=f4e331]:
+        - generic [ref=f4e332]:
+          - generic [ref=f4e333]:
+            - generic [ref=f4e334]: LA
+            - generic [ref=f4e335]:
+              - heading "Staff Software Engineer, Product (São Paulo)" [level=3] [ref=f4e336]
+              - paragraph [ref=f4e337]: LawnStarter · Brazil
+          - generic [ref=f4e338]: 3%
+        - paragraph [ref=f4e341]: Strong overlap on aws, react, typescript. Estimated fit 3%.
+        - generic [ref=f4e342]:
+          - button "Auto-apply" [ref=f4e343] [cursor=pointer]
+          - link "View" [ref=f4e344] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/software-development/staff-software-engineer-product-sao-paulo-2091055
+      - generic [ref=f4e345]:
+        - generic [ref=f4e346]:
+          - generic [ref=f4e347]:
+            - generic [ref=f4e348]: LA
+            - generic [ref=f4e349]:
+              - heading "Staff Product Engineer (Mexico City)" [level=3] [ref=f4e350]
+              - paragraph [ref=f4e351]: LawnStarter · Mexico
+          - generic [ref=f4e352]: 3%
+        - paragraph [ref=f4e355]: Strong overlap on aws, react, typescript. Estimated fit 3%.
+        - generic [ref=f4e356]:
+          - button "Auto-apply" [ref=f4e357] [cursor=pointer]
+          - link "View" [ref=f4e358] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/product/staff-product-engineer-mexico-city-2091057
+      - generic [ref=f4e359]:
+        - generic [ref=f4e360]:
+          - generic [ref=f4e361]:
+            - generic [ref=f4e362]: LA
+            - generic [ref=f4e363]:
+              - heading "Staff Product Engineer (Belo Horizonte)" [level=3] [ref=f4e364]
+              - paragraph [ref=f4e365]: LawnStarter · Brazil
+          - generic [ref=f4e366]: 3%
+        - paragraph [ref=f4e369]: Strong overlap on aws, react, typescript. Estimated fit 3%.
+        - generic [ref=f4e370]:
+          - button "Auto-apply" [ref=f4e371] [cursor=pointer]
+          - link "View" [ref=f4e372] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/product/staff-product-engineer-belo-horizonte-2091052
+      - generic [ref=f4e373]:
+        - generic [ref=f4e374]:
+          - generic [ref=f4e375]:
+            - generic [ref=f4e376]: LA
+            - generic [ref=f4e377]:
+              - heading "Staff Software Engineer, Product (Mexico City)" [level=3] [ref=f4e378]
+              - paragraph [ref=f4e379]: LawnStarter · Mexico
+          - generic [ref=f4e380]: 3%
+        - paragraph [ref=f4e383]: Strong overlap on aws, react, typescript. Estimated fit 3%.
+        - generic [ref=f4e384]:
+          - button "Auto-apply" [ref=f4e385] [cursor=pointer]
+          - link "View" [ref=f4e386] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/software-development/staff-software-engineer-product-mexico-city-2091050
+      - generic [ref=f4e387]:
+        - generic [ref=f4e388]:
+          - generic [ref=f4e389]:
+            - generic [ref=f4e390]: LA
+            - generic [ref=f4e391]:
+              - heading "Staff Software Engineer, Product (Belo Horizonte)" [level=3] [ref=f4e392]
+              - paragraph [ref=f4e393]: LawnStarter · Brazil
+          - generic [ref=f4e394]: 3%
+        - paragraph [ref=f4e397]: Strong overlap on aws, react, typescript. Estimated fit 3%.
+        - generic [ref=f4e398]:
+          - button "Auto-apply" [ref=f4e399] [cursor=pointer]
+          - link "View" [ref=f4e400] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/software-development/staff-software-engineer-product-belo-horizonte-2091056
+      - generic [ref=f4e401]:
+        - generic [ref=f4e402]:
+          - generic [ref=f4e403]:
+            - generic [ref=f4e404]: LA
+            - generic [ref=f4e405]:
+              - heading "Staff Software Engineer, Product (Florianópolis)" [level=3] [ref=f4e406]
+              - paragraph [ref=f4e407]: LawnStarter · Brazil
+          - generic [ref=f4e408]: 3%
+        - paragraph [ref=f4e411]: Strong overlap on aws, react, typescript. Estimated fit 3%.
+        - generic [ref=f4e412]:
+          - button "Auto-apply" [ref=f4e413] [cursor=pointer]
+          - link "View" [ref=f4e414] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/software-development/staff-software-engineer-product-florianopolis-2091059
+      - generic [ref=f4e415]:
+        - generic [ref=f4e416]:
+          - generic [ref=f4e417]:
+            - generic [ref=f4e418]: LA
+            - generic [ref=f4e419]:
+              - heading "Staff Product Engineer (Florianópolis)" [level=3] [ref=f4e420]
+              - paragraph [ref=f4e421]: LawnStarter · Brazil
+          - generic [ref=f4e422]: 3%
+        - paragraph [ref=f4e425]: Strong overlap on aws, react, typescript. Estimated fit 3%.
+        - generic [ref=f4e426]:
+          - button "Auto-apply" [ref=f4e427] [cursor=pointer]
+          - link "View" [ref=f4e428] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/product/staff-product-engineer-florianopolis-2091051
+      - generic [ref=f4e429]:
+        - generic [ref=f4e430]:
+          - generic [ref=f4e431]:
+            - generic [ref=f4e432]: RI
+            - generic [ref=f4e433]:
+              - heading "Executive Assistant" [level=3] [ref=f4e434]
+              - paragraph [ref=f4e435]: Ritual AdsÂ® · Pasadena, Pasadena, California, United States
+          - generic [ref=f4e436]: 3%
+        - paragraph [ref=f4e439]: Strong overlap on llm, machine learning. Estimated fit 3%.
+        - generic [ref=f4e440]:
+          - button "Auto-apply" [ref=f4e441] [cursor=pointer]
+          - link "View" [ref=f4e442] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-executive-assistant-ritual-adsr-1135344
+      - generic [ref=f4e443]:
+        - generic [ref=f4e444]:
+          - generic [ref=f4e445]:
+            - generic [ref=f4e446]: FL
+            - generic [ref=f4e447]:
+              - heading "Product Designer" [level=3] [ref=f4e448]
+              - paragraph [ref=f4e449]: Flint · New York, New York, New York, United States
+          - generic [ref=f4e450]: 2%
+        - paragraph [ref=f4e453]: General relevance to your profile. Estimated fit 2%.
+        - generic [ref=f4e454]:
+          - button "Auto-apply" [ref=f4e455] [cursor=pointer]
+          - link "View" [ref=f4e456] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-product-designer-flint-1135340
+      - generic [ref=f4e457]:
+        - generic [ref=f4e458]:
+          - generic [ref=f4e459]:
+            - generic [ref=f4e460]: CL
+            - generic [ref=f4e461]:
+              - heading "Customer Operations & Writing Specialist" [level=3] [ref=f4e462]
+              - paragraph [ref=f4e463]: Clerky, Inc. · Worldwide
+          - generic [ref=f4e464]: 2%
+        - paragraph [ref=f4e467]: General relevance to your profile. Estimated fit 2%.
+        - generic [ref=f4e468]:
+          - button "Auto-apply" [ref=f4e469] [cursor=pointer]
+          - link "View" [ref=f4e470] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/customer-service/customer-operations-writing-specialist-2090942
+      - generic [ref=f4e471]:
+        - generic [ref=f4e472]:
+          - generic [ref=f4e473]:
+            - generic [ref=f4e474]: GI
+            - generic [ref=f4e475]:
+              - heading "Paralegal" [level=3] [ref=f4e476]
+              - paragraph [ref=f4e477]: Giga Energy · Greater Houston,
+          - generic [ref=f4e478]: 2%
+        - paragraph [ref=f4e481]: Strong overlap on aws. Estimated fit 2%.
+        - generic [ref=f4e482]:
+          - button "Auto-apply" [ref=f4e483] [cursor=pointer]
+          - link "View" [ref=f4e484] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-paralegal-giga-energy-1135386
+      - generic [ref=f4e485]:
+        - generic [ref=f4e486]:
+          - generic [ref=f4e487]:
+            - generic [ref=f4e488]: CO
+            - generic [ref=f4e489]:
+              - heading "Brand Designer" [level=3] [ref=f4e490]
+              - paragraph [ref=f4e491]: "Coâ\x80\x93Star · New York, New York, New York, United States"
+          - generic [ref=f4e492]: 2%
+        - paragraph [ref=f4e495]: General relevance to your profile. Estimated fit 2%.
+        - generic [ref=f4e496]:
+          - button "Auto-apply" [ref=f4e497] [cursor=pointer]
+          - link "View" [ref=f4e498] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-brand-designer-co-star-1135383
+      - generic [ref=f4e499]:
+        - generic [ref=f4e500]:
+          - generic [ref=f4e501]:
+            - generic [ref=f4e502]: "Ã\x89"
+            - generic [ref=f4e503]:
+              - 'heading "Asesor Ventas Remoto â¬1.800 Al Mes Remoto Sin Experiencia" [level=3] [ref=f4e504]'
+              - paragraph [ref=f4e505]: "Ã\x89xito Oposiciones · Madrid,"
+          - generic [ref=f4e506]: 2%
+        - paragraph [ref=f4e509]: Strong overlap on python. Estimated fit 2%.
+        - generic [ref=f4e510]:
+          - button "Auto-apply" [ref=f4e511] [cursor=pointer]
+          - link "View" [ref=f4e512] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-asesor-ventas-remoto-e1-800-al-mes-remoto-sin-experiencia-exito-oposiciones-1135324
+      - generic [ref=f4e513]:
+        - generic [ref=f4e514]:
+          - generic [ref=f4e515]:
+            - generic [ref=f4e516]: TA
+            - generic [ref=f4e517]:
+              - heading "Team Member" [level=3] [ref=f4e518]
+              - paragraph [ref=f4e519]: Taco Boy · Cloquet,
+          - generic [ref=f4e520]: 2%
+        - paragraph [ref=f4e523]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e524]:
+          - button "Auto-apply" [ref=f4e525] [cursor=pointer]
+          - link "View" [ref=f4e526] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-team-member-taco-boy-1135392
+      - generic [ref=f4e527]:
+        - generic [ref=f4e528]:
+          - generic [ref=f4e529]:
+            - generic [ref=f4e530]: SU
+            - generic [ref=f4e531]:
+              - heading "Patient Experience Coordinator" [level=3] [ref=f4e532]
+              - paragraph [ref=f4e533]: Sunrise · Las Vegas, Las Vegas, Nevada, United States
+          - generic [ref=f4e534]: 2%
+        - paragraph [ref=f4e537]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e538]:
+          - button "Auto-apply" [ref=f4e539] [cursor=pointer]
+          - link "View" [ref=f4e540] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-patient-experience-coordinator-sunrise-1135341
+      - generic [ref=f4e541]:
+        - generic [ref=f4e542]:
+          - generic [ref=f4e543]:
+            - generic [ref=f4e544]: "ON"
+            - generic [ref=f4e545]:
+              - heading "Executive Assistant" [level=3] [ref=f4e546]
+              - paragraph [ref=f4e547]: OnlineJobs.PH · Glendale,
+          - generic [ref=f4e548]: 1%
+        - paragraph [ref=f4e551]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e552]:
+          - button "Auto-apply" [ref=f4e553] [cursor=pointer]
+          - link "View" [ref=f4e554] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-executive-assistant-onlinejobs-ph-1135342
+      - generic [ref=f4e555]:
+        - generic [ref=f4e556]:
+          - generic [ref=f4e557]:
+            - generic [ref=f4e558]: WA
+            - generic [ref=f4e559]:
+              - heading "Clinical Pharmacist" [level=3] [ref=f4e560]
+              - paragraph [ref=f4e561]: Walrus Health · United States,
+          - generic [ref=f4e562]: 1%
+        - paragraph [ref=f4e565]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e566]:
+          - button "Auto-apply" [ref=f4e567] [cursor=pointer]
+          - link "View" [ref=f4e568] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-clinical-pharmacist-walrus-health-1135343
+      - generic [ref=f4e569]:
+        - generic [ref=f4e570]:
+          - generic [ref=f4e571]:
+            - generic [ref=f4e572]: TH
+            - generic [ref=f4e573]:
+              - heading "Executive Assistant" [level=3] [ref=f4e574]
+              - paragraph [ref=f4e575]: The Mom Project · Remote
+          - generic [ref=f4e576]: 1%
+        - paragraph [ref=f4e579]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e580]:
+          - button "Auto-apply" [ref=f4e581] [cursor=pointer]
+          - link "View" [ref=f4e582] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-executive-assistant-the-mom-project-1135306
+      - generic [ref=f4e583]:
+        - generic [ref=f4e584]:
+          - generic [ref=f4e585]:
+            - generic [ref=f4e586]: A.
+            - generic [ref=f4e587]:
+              - heading "Senior Independent Software Developer" [level=3] [ref=f4e588]
+              - paragraph [ref=f4e589]: A.Team · Americas, Europe, Israel
+          - generic [ref=f4e590]: 1%
+        - paragraph [ref=f4e593]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e594]:
+          - button "Auto-apply" [ref=f4e595] [cursor=pointer]
+          - link "View" [ref=f4e596] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/software-development/senior-independent-software-developer-1919265
+      - generic [ref=f4e597]:
+        - generic [ref=f4e598]:
+          - generic [ref=f4e599]:
+            - generic [ref=f4e600]: YO
+            - generic [ref=f4e601]:
+              - heading "Architect CAD & Construction Documentation" [level=3] [ref=f4e602]
+              - paragraph [ref=f4e603]: YO IT Consulting · Sydney, Sydney, New South Wales, Australia
+          - generic [ref=f4e604]: 1%
+        - paragraph [ref=f4e607]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e608]:
+          - button "Auto-apply" [ref=f4e609] [cursor=pointer]
+          - link "View" [ref=f4e610] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-architect-cad-amp-construction-documentation-yo-it-consulting-1135406
+      - generic [ref=f4e611]:
+        - generic [ref=f4e612]:
+          - generic [ref=f4e613]:
+            - generic [ref=f4e614]: CA
+            - generic [ref=f4e615]:
+              - heading "Enterprise Account Executive" [level=3] [ref=f4e616]
+              - paragraph [ref=f4e617]: career · Remote
+          - generic [ref=f4e618]: 1%
+        - paragraph [ref=f4e621]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e622]:
+          - button "Auto-apply" [ref=f4e623] [cursor=pointer]
+          - link "View" [ref=f4e624] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-enterprise-account-executive-career-1135389
+      - generic [ref=f4e625]:
+        - generic [ref=f4e626]:
+          - generic [ref=f4e627]:
+            - generic [ref=f4e628]: IA
+            - generic [ref=f4e629]:
+              - heading "Freelance Writer" [level=3] [ref=f4e630]
+              - paragraph [ref=f4e631]: IAPWE · Worldwide
+          - generic [ref=f4e632]: 1%
+        - paragraph [ref=f4e635]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e636]:
+          - button "Auto-apply" [ref=f4e637] [cursor=pointer]
+          - link "View" [ref=f4e638] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/writing/freelance-writer-1185979
+      - generic [ref=f4e639]:
+        - generic [ref=f4e640]:
+          - generic [ref=f4e641]:
+            - generic [ref=f4e642]: HU
+            - generic [ref=f4e643]:
+              - heading "Ecommerce Specialist" [level=3] [ref=f4e644]
+              - paragraph [ref=f4e645]: Huntress Talent · New York City Metropolitan Area
+          - generic [ref=f4e646]: 1%
+        - paragraph [ref=f4e649]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e650]:
+          - button "Auto-apply" [ref=f4e651] [cursor=pointer]
+          - link "View" [ref=f4e652] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-ecommerce-specialist-huntress-talent-1135385
+      - generic [ref=f4e653]:
+        - generic [ref=f4e654]:
+          - generic [ref=f4e655]:
+            - generic [ref=f4e656]: TR
+            - generic [ref=f4e657]:
+              - heading "Product Sales Specialist - Pet Health" [level=3] [ref=f4e658]
+              - paragraph [ref=f4e659]: Tribe Wellness · USA, CST (UTC-6)
+          - generic [ref=f4e660]: 1%
+        - paragraph [ref=f4e663]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e664]:
+          - button "Auto-apply" [ref=f4e665] [cursor=pointer]
+          - link "View" [ref=f4e666] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/sales/product-sales-specialist-pet-health-2091048
+      - generic [ref=f4e667]:
+        - generic [ref=f4e668]:
+          - generic [ref=f4e669]:
+            - generic [ref=f4e670]: IN
+            - generic [ref=f4e671]:
+              - heading "Onboarding Specialist" [level=3] [ref=f4e672]
+              - paragraph [ref=f4e673]: INNERGY · Austin, Austin, Texas, United States
+          - generic [ref=f4e674]: 1%
+        - paragraph [ref=f4e677]: Strong overlap on aws. Estimated fit 1%.
+        - generic [ref=f4e678]:
+          - button "Auto-apply" [ref=f4e679] [cursor=pointer]
+          - link "View" [ref=f4e680] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-onboarding-specialist-innergy-1135339
+      - generic [ref=f4e681]:
+        - generic [ref=f4e682]:
+          - generic [ref=f4e683]:
+            - generic [ref=f4e684]: IM
+            - generic [ref=f4e685]:
+              - heading "Client Success Coach (CSM)" [level=3] [ref=f4e686]
+              - paragraph [ref=f4e687]: Impact Clients · Northern America, Europe, South Africa
+          - generic [ref=f4e688]: 1%
+        - paragraph [ref=f4e691]: Strong overlap on llm. Estimated fit 1%.
+        - generic [ref=f4e692]:
+          - button "Auto-apply" [ref=f4e693] [cursor=pointer]
+          - link "View" [ref=f4e694] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/customer-service/client-success-coach-csm-2091039
+      - generic [ref=f4e695]:
+        - generic [ref=f4e696]:
+          - generic [ref=f4e697]:
+            - generic [ref=f4e698]: BL
+            - generic [ref=f4e699]:
+              - heading "People Operations Specialist" [level=3] [ref=f4e700]
+              - paragraph [ref=f4e701]: Blackthorn · New York, New York, New York, United States
+          - generic [ref=f4e702]: 1%
+        - paragraph [ref=f4e705]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e706]:
+          - button "Auto-apply" [ref=f4e707] [cursor=pointer]
+          - link "View" [ref=f4e708] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-people-operations-specialist-blackthorn-1135379
+      - generic [ref=f4e709]:
+        - generic [ref=f4e710]:
+          - generic [ref=f4e711]:
+            - generic [ref=f4e712]: LE
+            - generic [ref=f4e713]:
+              - heading "Communications Manager" [level=3] [ref=f4e714]
+              - paragraph [ref=f4e715]: Lemon.io · LATAM, Europe
+          - generic [ref=f4e716]: 1%
+        - paragraph [ref=f4e719]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e720]:
+          - button "Auto-apply" [ref=f4e721] [cursor=pointer]
+          - link "View" [ref=f4e722] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/communications/communications-manager-2090985
+      - generic [ref=f4e723]:
+        - generic [ref=f4e724]:
+          - generic [ref=f4e725]:
+            - generic [ref=f4e726]: DI
+            - generic [ref=f4e727]:
+              - heading "Caretaker" [level=3] [ref=f4e728]
+              - paragraph [ref=f4e729]: Discovery Parks · Boulder,
+          - generic [ref=f4e730]: 1%
+        - paragraph [ref=f4e733]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e734]:
+          - button "Auto-apply" [ref=f4e735] [cursor=pointer]
+          - link "View" [ref=f4e736] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-caretaker-discovery-parks-1135429
+      - generic [ref=f4e737]:
+        - generic [ref=f4e738]:
+          - generic [ref=f4e739]:
+            - generic [ref=f4e740]: PH
+            - generic [ref=f4e741]:
+              - heading "https phase.community job_role teachers" [level=3] [ref=f4e742]
+              - paragraph [ref=f4e743]: PHASE · Dharmavaram,
+          - generic [ref=f4e744]: 1%
+        - paragraph [ref=f4e747]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e748]:
+          - button "Auto-apply" [ref=f4e749] [cursor=pointer]
+          - link "View" [ref=f4e750] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-https-phase-community-job-role-teachers-phase-1135366
+      - generic [ref=f4e751]:
+        - generic [ref=f4e752]:
+          - generic [ref=f4e753]:
+            - generic [ref=f4e754]: PH
+            - generic [ref=f4e755]:
+              - heading "https phase.community job_role physical fitness" [level=3] [ref=f4e756]
+              - paragraph [ref=f4e757]: PHASE · Guindy,
+          - generic [ref=f4e758]: 1%
+        - paragraph [ref=f4e761]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e762]:
+          - button "Auto-apply" [ref=f4e763] [cursor=pointer]
+          - link "View" [ref=f4e764] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-https-phase-community-job-role-physical-fitness-phase-1135365
+      - generic [ref=f4e765]:
+        - generic [ref=f4e766]:
+          - generic [ref=f4e767]:
+            - generic [ref=f4e768]: CR
+            - generic [ref=f4e769]:
+              - heading "Inside Sales Contractor" [level=3] [ref=f4e770]
+              - paragraph [ref=f4e771]: Credit Wellness, LLC · Worldwide
+          - generic [ref=f4e772]: 1%
+        - paragraph [ref=f4e775]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e776]:
+          - button "Auto-apply" [ref=f4e777] [cursor=pointer]
+          - link "View" [ref=f4e778] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/sales/inside-sales-contractor-2086540
+      - generic [ref=f4e779]:
+        - generic [ref=f4e780]:
+          - generic [ref=f4e781]:
+            - generic [ref=f4e782]: MU
+            - generic [ref=f4e783]:
+              - heading "Creative Project Manager" [level=3] [ref=f4e784]
+              - paragraph [ref=f4e785]: MUSEUM OF ICE CREAM · Washington,
+          - generic [ref=f4e786]: 1%
+        - paragraph [ref=f4e789]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e790]:
+          - button "Auto-apply" [ref=f4e791] [cursor=pointer]
+          - link "View" [ref=f4e792] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-creative-project-manager-museum-of-ice-cream-1135382
+      - generic [ref=f4e793]:
+        - generic [ref=f4e794]:
+          - generic [ref=f4e795]:
+            - generic [ref=f4e796]: GA
+            - generic [ref=f4e797]:
+              - heading "Head of Marketing & Communications" [level=3] [ref=f4e798]
+              - paragraph [ref=f4e799]: garden3d · Worldwide
+          - generic [ref=f4e800]: 1%
+        - paragraph [ref=f4e803]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e804]:
+          - button "Auto-apply" [ref=f4e805] [cursor=pointer]
+          - link "View" [ref=f4e806] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/marketing/head-of-marketing-communications-2091068
+      - generic [ref=f4e807]:
+        - generic [ref=f4e808]:
+          - generic [ref=f4e809]:
+            - generic [ref=f4e810]: SE
+            - generic [ref=f4e811]:
+              - heading "Operations Specialist" [level=3] [ref=f4e812]
+              - paragraph [ref=f4e813]: Sezzle · Latin America,
+          - generic [ref=f4e814]: 1%
+        - paragraph [ref=f4e817]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e818]:
+          - button "Auto-apply" [ref=f4e819] [cursor=pointer]
+          - link "View" [ref=f4e820] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-operations-specialist-sezzle-1135398
+      - generic [ref=f4e821]:
+        - generic [ref=f4e822]:
+          - generic [ref=f4e823]:
+            - generic [ref=f4e824]: UN
+            - generic [ref=f4e825]:
+              - heading "Consultor para estrategia de SBC de Primera Infancia Programme Effectiveness Quito Ecuador Remoto 7 meses Nacional" [level=3] [ref=f4e826]
+              - paragraph [ref=f4e827]: UNICEF · Quito,
+          - generic [ref=f4e828]: 1%
+        - paragraph [ref=f4e831]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e832]:
+          - button "Auto-apply" [ref=f4e833] [cursor=pointer]
+          - link "View" [ref=f4e834] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-consultor-para-estrategia-de-sbc-de-primera-infancia-programme-effectiveness-quito-ecuador-remoto-7-meses-nacional-unicef-1135378
+      - generic [ref=f4e835]:
+        - generic [ref=f4e836]:
+          - generic [ref=f4e837]:
+            - generic [ref=f4e838]: CO
+            - generic [ref=f4e839]:
+              - heading "Remote Office Assistant" [level=3] [ref=f4e840]
+              - paragraph [ref=f4e841]: Coalition Technologies · Worldwide
+          - generic [ref=f4e842]: 1%
+        - paragraph [ref=f4e845]: Strong overlap on sql. Estimated fit 1%.
+        - generic [ref=f4e846]:
+          - button "Auto-apply" [ref=f4e847] [cursor=pointer]
+          - link "View" [ref=f4e848] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/marketing/remote-office-assistant-1680495
+      - generic [ref=f4e849]:
+        - generic [ref=f4e850]:
+          - generic [ref=f4e851]:
+            - generic [ref=f4e852]: OT
+            - generic [ref=f4e853]:
+              - heading "Analista de Suporte N1 JR" [level=3] [ref=f4e854]
+              - paragraph [ref=f4e855]: Oto CRM · Brasil,
+          - generic [ref=f4e856]: 1%
+        - paragraph [ref=f4e859]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e860]:
+          - button "Auto-apply" [ref=f4e861] [cursor=pointer]
+          - link "View" [ref=f4e862] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-analista-de-suporte-n1-jr-oto-crm-1135377
+      - generic [ref=f4e863]:
+        - generic [ref=f4e864]:
+          - generic [ref=f4e865]:
+            - generic [ref=f4e866]: TH
+            - generic [ref=f4e867]:
+              - heading "How Keep Your PiesÂ FromÂ Getting Soggy BottomsÂ" [level=3] [ref=f4e868]
+              - paragraph [ref=f4e869]: The Sweetery · Anupgarh,
+          - generic [ref=f4e870]: 1%
+        - paragraph [ref=f4e873]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e874]:
+          - button "Auto-apply" [ref=f4e875] [cursor=pointer]
+          - link "View" [ref=f4e876] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/
+      - generic [ref=f4e877]:
+        - generic [ref=f4e878]:
+          - generic [ref=f4e879]:
+            - generic [ref=f4e880]: TH
+            - generic [ref=f4e881]:
+              - heading "HOW DO I PREVENT COOKIES FROM SPREADING DURING BAKING" [level=3] [ref=f4e882]
+              - paragraph [ref=f4e883]: The Sweetery · Anupgarh,
+          - generic [ref=f4e884]: 1%
+        - paragraph [ref=f4e887]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e888]:
+          - button "Auto-apply" [ref=f4e889] [cursor=pointer]
+          - link "View" [ref=f4e890] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-how-do-i-prevent-cookies-from-spreading-during-baking-the-sweetery-1135363
+      - generic [ref=f4e891]:
+        - generic [ref=f4e892]:
+          - generic [ref=f4e893]:
+            - generic [ref=f4e894]: OP
+            - generic [ref=f4e895]:
+              - heading "Head of Operations" [level=3] [ref=f4e896]
+              - paragraph [ref=f4e897]: OpenTrack · Chicago, Chicago, Illinois, United States
+          - generic [ref=f4e898]: 1%
+        - paragraph [ref=f4e901]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e902]:
+          - button "Auto-apply" [ref=f4e903] [cursor=pointer]
+          - link "View" [ref=f4e904] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-head-of-operations-opentrack-1135384
+      - generic [ref=f4e905]:
+        - generic [ref=f4e906]:
+          - generic [ref=f4e907]:
+            - generic [ref=f4e908]: AU
+            - generic [ref=f4e909]:
+              - heading "Front of House Scoopers Wagga Wagga" [level=3] [ref=f4e910]
+              - paragraph [ref=f4e911]: Augustus Gelatery · Wagga Wagga,
+          - generic [ref=f4e912]: 1%
+        - paragraph [ref=f4e915]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e916]:
+          - button "Auto-apply" [ref=f4e917] [cursor=pointer]
+          - link "View" [ref=f4e918] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-front-of-house-scoopers-wagga-wagga-augustus-gelatery-1135312
+      - generic [ref=f4e919]:
+        - generic [ref=f4e920]:
+          - generic [ref=f4e921]:
+            - generic [ref=f4e922]: BE
+            - generic [ref=f4e923]:
+              - heading "Chief Operating Officer" [level=3] [ref=f4e924]
+              - paragraph [ref=f4e925]: Berni and Mick Ireland · Sydney, Sydney, New South Wales, Australia
+          - generic [ref=f4e926]: 1%
+        - paragraph [ref=f4e929]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e930]:
+          - button "Auto-apply" [ref=f4e931] [cursor=pointer]
+          - link "View" [ref=f4e932] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-chief-operating-officer-berni-and-mick-ireland-1135353
+      - generic [ref=f4e933]:
+        - generic [ref=f4e934]:
+          - generic [ref=f4e935]:
+            - generic [ref=f4e936]: EN
+            - generic [ref=f4e937]:
+              - heading "Sales Assistant" [level=3] [ref=f4e938]
+              - paragraph [ref=f4e939]: Endureed by Global Innovation · USA
+          - generic [ref=f4e940]: 1%
+        - paragraph [ref=f4e943]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e944]:
+          - button "Auto-apply" [ref=f4e945] [cursor=pointer]
+          - link "View" [ref=f4e946] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/sales/sales-assistant-2091038
+      - generic [ref=f4e947]:
+        - generic [ref=f4e948]:
+          - generic [ref=f4e949]:
+            - generic [ref=f4e950]: FU
+            - generic [ref=f4e951]:
+              - heading "Brand Content & Communications Associate Manager" [level=3] [ref=f4e952]
+              - paragraph [ref=f4e953]: FuseGlobal · Remote,
+          - generic [ref=f4e954]: 1%
+        - paragraph [ref=f4e957]: General relevance to your profile. Estimated fit 1%.
+        - generic [ref=f4e958]:
+          - button "Auto-apply" [ref=f4e959] [cursor=pointer]
+          - link "View" [ref=f4e960] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-brand-content-communications-associate-manager-fuseglobal-1135387
+      - generic [ref=f4e961]:
+        - generic [ref=f4e962]:
+          - generic [ref=f4e963]:
+            - generic [ref=f4e964]: E.
+            - generic [ref=f4e965]:
+              - heading "Manager International Customer Supply Chain rhode" [level=3] [ref=f4e966]
+              - paragraph [ref=f4e967]: e.l.f. Beauty · United Kingdom - Remote
+          - generic [ref=f4e968]: 1%
+        - paragraph [ref=f4e971]: Strong overlap on llm. Estimated fit 0%.
+        - generic [ref=f4e972]:
+          - button "Auto-apply" [ref=f4e973] [cursor=pointer]
+          - link "View" [ref=f4e974] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-manager-international-customer-supply-chain-rhode-e-l-f-beauty-1135330
+      - generic [ref=f4e975]:
+        - generic [ref=f4e976]:
+          - generic [ref=f4e977]:
+            - generic [ref=f4e978]: PH
+            - generic [ref=f4e979]:
+              - heading "Operations Coordinator" [level=3] [ref=f4e980]
+              - paragraph [ref=f4e981]: Phillips Corporation · Connecticut, Connecticut, United States
+          - generic [ref=f4e982]: 1%
+        - paragraph [ref=f4e985]: Strong overlap on llm. Estimated fit 0%.
+        - generic [ref=f4e986]:
+          - button "Auto-apply" [ref=f4e987] [cursor=pointer]
+          - link "View" [ref=f4e988] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-operations-coordinator-phillips-corporation-1135304
+      - generic [ref=f4e989]:
+        - generic [ref=f4e990]:
+          - generic [ref=f4e991]:
+            - generic [ref=f4e992]: UN
+            - generic [ref=f4e993]:
+              - heading "Tier III Service Desk Engineer" [level=3] [ref=f4e994]
+              - paragraph [ref=f4e995]: Unio Digital · USA
+          - generic [ref=f4e996]: 0%
+        - paragraph [ref=f4e998]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e999]:
+          - button "Auto-apply" [ref=f4e1000] [cursor=pointer]
+          - link "View" [ref=f4e1001] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/information-technology/tier-iii-service-desk-engineer-2091045
+      - generic [ref=f4e1002]:
+        - generic [ref=f4e1003]:
+          - generic [ref=f4e1004]:
+            - generic [ref=f4e1005]: HE
+            - generic [ref=f4e1006]:
+              - heading "VP of Strategic Partnerships & Growth" [level=3] [ref=f4e1007]
+              - paragraph [ref=f4e1008]: HealthCorps · Palm Beach, Palm Beach, Florida, United States
+          - generic [ref=f4e1009]: 0%
+        - paragraph [ref=f4e1011]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1012]:
+          - button "Auto-apply" [ref=f4e1013] [cursor=pointer]
+          - link "View" [ref=f4e1014] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-vp-of-strategic-partnerships-amp-growth-healthcorps-1135381
+      - generic [ref=f4e1015]:
+        - generic [ref=f4e1016]:
+          - generic [ref=f4e1017]:
+            - generic [ref=f4e1018]: WO
+            - generic [ref=f4e1019]:
+              - heading "Data Labeling Specialists" [level=3] [ref=f4e1020]
+              - paragraph [ref=f4e1021]: Workada · USA
+          - generic [ref=f4e1022]: 0%
+        - paragraph [ref=f4e1024]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1025]:
+          - button "Auto-apply" [ref=f4e1026] [cursor=pointer]
+          - link "View" [ref=f4e1027] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/data/data-labeling-specialists-2090903
+      - generic [ref=f4e1028]:
+        - generic [ref=f4e1029]:
+          - generic [ref=f4e1030]:
+            - generic [ref=f4e1031]: OU
+            - generic [ref=f4e1032]:
+              - heading "Business Development Representative" [level=3] [ref=f4e1033]
+              - paragraph [ref=f4e1034]: Outsite · Northern America, Europe, UK, France, European timezones
+          - generic [ref=f4e1035]: 0%
+        - paragraph [ref=f4e1037]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1038]:
+          - button "Auto-apply" [ref=f4e1039] [cursor=pointer]
+          - link "View" [ref=f4e1040] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/sales/business-development-representative-2091075
+      - generic [ref=f4e1041]:
+        - generic [ref=f4e1042]:
+          - generic [ref=f4e1043]:
+            - generic [ref=f4e1044]: CO
+            - generic [ref=f4e1045]:
+              - heading "Freelance Copywriter" [level=3] [ref=f4e1046]
+              - paragraph [ref=f4e1047]: Coalition Technologies · Worldwide
+          - generic [ref=f4e1048]: 0%
+        - paragraph [ref=f4e1050]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1051]:
+          - button "Auto-apply" [ref=f4e1052] [cursor=pointer]
+          - link "View" [ref=f4e1053] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/writing/freelance-copywriter-1749306
+      - generic [ref=f4e1054]:
+        - generic [ref=f4e1055]:
+          - generic [ref=f4e1056]:
+            - generic [ref=f4e1057]: RO
+            - generic [ref=f4e1058]:
+              - heading "Animal Cruelty Case Specialist" [level=3] [ref=f4e1059]
+              - paragraph [ref=f4e1060]: Rose, Klein & Marias · Sacramento, Sacramento, California, United States
+          - generic [ref=f4e1061]: 0%
+        - paragraph [ref=f4e1063]: Strong overlap on aws. Estimated fit 0%.
+        - generic [ref=f4e1064]:
+          - button "Auto-apply" [ref=f4e1065] [cursor=pointer]
+          - link "View" [ref=f4e1066] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-animal-cruelty-case-specialist-rose-klein-amp-marias-1135388
+      - generic [ref=f4e1067]:
+        - generic [ref=f4e1068]:
+          - generic [ref=f4e1069]:
+            - generic [ref=f4e1070]: TE
+            - generic [ref=f4e1071]:
+              - heading "Content Reviewer - United States" [level=3] [ref=f4e1072]
+              - paragraph [ref=f4e1073]: TELUS Digital · USA
+          - generic [ref=f4e1074]: 0%
+        - paragraph [ref=f4e1076]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1077]:
+          - button "Auto-apply" [ref=f4e1078] [cursor=pointer]
+          - link "View" [ref=f4e1079] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/all-others/content-reviewer-united-states-2091074
+      - generic [ref=f4e1080]:
+        - generic [ref=f4e1081]:
+          - generic [ref=f4e1082]:
+            - generic [ref=f4e1083]: CG
+            - generic [ref=f4e1084]:
+              - heading "Freelance 3D Architectural Modeller UK Hours" [level=3] [ref=f4e1085]
+              - paragraph [ref=f4e1086]: CGconnect · London,
+          - generic [ref=f4e1087]: 0%
+        - paragraph [ref=f4e1089]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1090]:
+          - button "Auto-apply" [ref=f4e1091] [cursor=pointer]
+          - link "View" [ref=f4e1092] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-freelance-3d-architectural-modeller-uk-hours-cgconnect-1135350
+      - generic [ref=f4e1093]:
+        - generic [ref=f4e1094]:
+          - generic [ref=f4e1095]:
+            - generic [ref=f4e1096]: TR
+            - generic [ref=f4e1097]:
+              - heading "Product Sales Specialist - Pet Health (CST timezone)" [level=3] [ref=f4e1098]
+              - paragraph [ref=f4e1099]: Tribe Wellness · Worldwide
+          - generic [ref=f4e1100]: 0%
+        - paragraph [ref=f4e1102]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1103]:
+          - button "Auto-apply" [ref=f4e1104] [cursor=pointer]
+          - link "View" [ref=f4e1105] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/sales/product-sales-specialist-pet-health-cst-timezone-2091072
+      - generic [ref=f4e1106]:
+        - generic [ref=f4e1107]:
+          - generic [ref=f4e1108]:
+            - generic [ref=f4e1109]: FS
+            - generic [ref=f4e1110]:
+              - heading "High-Ticket Financial Sales Specialist & Team Lead Track" [level=3] [ref=f4e1111]
+              - paragraph [ref=f4e1112]: FSE LLC · Worldwide
+          - generic [ref=f4e1113]: 0%
+        - paragraph [ref=f4e1115]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1116]:
+          - button "Auto-apply" [ref=f4e1117] [cursor=pointer]
+          - link "View" [ref=f4e1118] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/sales/high-ticket-financial-sales-specialist-team-lead-track-2090949
+      - generic [ref=f4e1119]:
+        - generic [ref=f4e1120]:
+          - generic [ref=f4e1121]:
+            - generic [ref=f4e1122]: AL
+            - generic [ref=f4e1123]:
+              - heading "Marketing Designer" [level=3] [ref=f4e1124]
+              - paragraph [ref=f4e1125]: albo · Ciudad Valles, Ciudad Valles, San Luis PotosÃ, MÃ©xico
+          - generic [ref=f4e1126]: 0%
+        - paragraph [ref=f4e1128]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1129]:
+          - button "Auto-apply" [ref=f4e1130] [cursor=pointer]
+          - link "View" [ref=f4e1131] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-marketing-designer-albo-1135376
+      - generic [ref=f4e1132]:
+        - generic [ref=f4e1133]:
+          - generic [ref=f4e1134]:
+            - generic [ref=f4e1135]: YO
+            - generic [ref=f4e1136]:
+              - heading "Architect CAD & Construction Documentation" [level=3] [ref=f4e1137]
+              - paragraph [ref=f4e1138]: YO IT Consulting · Portugal,
+          - generic [ref=f4e1139]: 0%
+        - paragraph [ref=f4e1141]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1142]:
+          - button "Auto-apply" [ref=f4e1143] [cursor=pointer]
+          - link "View" [ref=f4e1144] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-architect-cad-construction-documentation-yo-it-consulting-1135405
+      - generic [ref=f4e1145]:
+        - generic [ref=f4e1146]:
+          - generic [ref=f4e1147]:
+            - generic [ref=f4e1148]: DE
+            - generic [ref=f4e1149]:
+              - heading "Content Producer" [level=3] [ref=f4e1150]
+              - paragraph [ref=f4e1151]: DesignMeshAI · Remote
+          - generic [ref=f4e1152]: 0%
+        - paragraph [ref=f4e1154]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1155]:
+          - button "Auto-apply" [ref=f4e1156] [cursor=pointer]
+          - link "View" [ref=f4e1157] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-content-producer-designmeshai-1135404
+      - generic [ref=f4e1158]:
+        - generic [ref=f4e1159]:
+          - generic [ref=f4e1160]:
+            - generic [ref=f4e1161]: TO
+            - generic [ref=f4e1162]:
+              - heading "NegÃ³cios Analista de SoluÃ§Ãµes de NegÃ³cios JÃºnior" [level=3] [ref=f4e1163]
+              - paragraph [ref=f4e1164]: TOTVS · Brasil,
+          - generic [ref=f4e1165]: 0%
+        - paragraph [ref=f4e1167]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1168]:
+          - button "Auto-apply" [ref=f4e1169] [cursor=pointer]
+          - link "View" [ref=f4e1170] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-negocios-analista-de-solucoes-de-negocios-junior-totvs-1135397
+      - generic [ref=f4e1171]:
+        - generic [ref=f4e1172]:
+          - generic [ref=f4e1173]:
+            - generic [ref=f4e1174]: WO
+            - generic [ref=f4e1175]:
+              - heading "IT Support Analyst" [level=3] [ref=f4e1176]
+              - paragraph [ref=f4e1177]: Work Force Nexus · Australia,
+          - generic [ref=f4e1178]: 0%
+        - paragraph [ref=f4e1180]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1181]:
+          - button "Auto-apply" [ref=f4e1182] [cursor=pointer]
+          - link "View" [ref=f4e1183] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-it-support-analyst-work-force-nexus-1135393
+      - generic [ref=f4e1184]:
+        - generic [ref=f4e1185]:
+          - generic [ref=f4e1186]:
+            - generic [ref=f4e1187]: LS
+            - generic [ref=f4e1188]:
+              - heading "Hand Assembly" [level=3] [ref=f4e1189]
+              - paragraph [ref=f4e1190]: Lsn · Cookeville,
+          - generic [ref=f4e1191]: 0%
+        - paragraph [ref=f4e1193]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1194]:
+          - button "Auto-apply" [ref=f4e1195] [cursor=pointer]
+          - link "View" [ref=f4e1196] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-hand-assembly-lsn-1135407
+      - generic [ref=f4e1197]:
+        - generic [ref=f4e1198]:
+          - generic [ref=f4e1199]:
+            - generic [ref=f4e1200]: EN
+            - generic [ref=f4e1201]:
+              - heading "Trabaja TODO Remoto Asesor de AtenciÃ³n al cliente y crosseling" [level=3] [ref=f4e1202]
+              - paragraph [ref=f4e1203]: EntelConnect · Lima, Lima, PerÃº
+          - generic [ref=f4e1204]: 0%
+        - paragraph [ref=f4e1206]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1207]:
+          - button "Auto-apply" [ref=f4e1208] [cursor=pointer]
+          - link "View" [ref=f4e1209] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-trabaja-todo-remoto-asesor-de-atencion-al-cliente-y-crosseling-entelconnect-1135399
+      - generic [ref=f4e1210]:
+        - generic [ref=f4e1211]:
+          - generic [ref=f4e1212]:
+            - generic [ref=f4e1213]: CO
+            - generic [ref=f4e1214]:
+              - heading "PROJECT SOVEREIGNTY" [level=3] [ref=f4e1215]
+              - paragraph [ref=f4e1216]: conceptMonkey | Product & Innovation Services - Sebastian Benderoth · Kirkwall,
+          - generic [ref=f4e1217]: 0%
+        - paragraph [ref=f4e1219]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1220]:
+          - button "Auto-apply" [ref=f4e1221] [cursor=pointer]
+          - link "View" [ref=f4e1222] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-project-sovereignty-conceptmonkey-product-amp-innovation-services-sebastian-benderoth-1135401
+      - generic [ref=f4e1223]:
+        - generic [ref=f4e1224]:
+          - generic [ref=f4e1225]:
+            - generic [ref=f4e1226]: SO
+            - generic [ref=f4e1227]:
+              - heading "I want all the money" [level=3] [ref=f4e1228]
+              - paragraph [ref=f4e1229]: Something Awful · Maybe,
+          - generic [ref=f4e1230]: 0%
+        - paragraph [ref=f4e1232]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1233]:
+          - button "Auto-apply" [ref=f4e1234] [cursor=pointer]
+          - link "View" [ref=f4e1235] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-i-want-all-the-money-something-awful-1135400
+      - generic [ref=f4e1236]:
+        - generic [ref=f4e1237]:
+          - generic [ref=f4e1238]:
+            - generic [ref=f4e1239]: SO
+            - generic [ref=f4e1240]:
+              - heading "Job hunting indecision" [level=3] [ref=f4e1241]
+              - paragraph [ref=f4e1242]: Something Awful · Chas,
+          - generic [ref=f4e1243]: 0%
+        - paragraph [ref=f4e1245]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1246]:
+          - button "Auto-apply" [ref=f4e1247] [cursor=pointer]
+          - link "View" [ref=f4e1248] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-job-hunting-indecision-something-awful-1135408
+      - generic [ref=f4e1249]:
+        - generic [ref=f4e1250]:
+          - generic [ref=f4e1251]:
+            - generic [ref=f4e1252]: TR
+            - generic [ref=f4e1253]:
+              - heading "Take the initiative" [level=3] [ref=f4e1254]
+              - paragraph [ref=f4e1255]: Trainvac · Lake County,
+          - generic [ref=f4e1256]: 0%
+        - paragraph [ref=f4e1258]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1259]:
+          - button "Auto-apply" [ref=f4e1260] [cursor=pointer]
+          - link "View" [ref=f4e1261] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-take-the-initiative-trainvac-1135391
+      - generic [ref=f4e1262]:
+        - generic [ref=f4e1263]:
+          - generic [ref=f4e1264]:
+            - generic [ref=f4e1265]: CE
+            - generic [ref=f4e1266]:
+              - heading "Social Community Representative" [level=3] [ref=f4e1267]
+              - paragraph [ref=f4e1268]: CELSIUS · Washington,
+          - generic [ref=f4e1269]: 0%
+        - paragraph [ref=f4e1271]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1272]:
+          - button "Auto-apply" [ref=f4e1273] [cursor=pointer]
+          - link "View" [ref=f4e1274] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-social-community-representative-celsius-1135380
+      - generic [ref=f4e1275]:
+        - generic [ref=f4e1276]:
+          - generic [ref=f4e1277]:
+            - generic [ref=f4e1278]: VE
+            - generic [ref=f4e1279]:
+              - heading "We don't currently have any open roles" [level=3] [ref=f4e1280]
+              - paragraph [ref=f4e1281]: Vet Vision AI · Open Hall,
+          - generic [ref=f4e1282]: 0%
+        - paragraph [ref=f4e1284]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1285]:
+          - button "Auto-apply" [ref=f4e1286] [cursor=pointer]
+          - link "View" [ref=f4e1287] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-we-dont-currently-have-any-open-roles-vet-vision-ai-1135370
+      - generic [ref=f4e1288]:
+        - generic [ref=f4e1289]:
+          - generic [ref=f4e1290]:
+            - generic [ref=f4e1291]: LU
+            - generic [ref=f4e1292]:
+              - heading "Officer" [level=3] [ref=f4e1293]
+              - paragraph [ref=f4e1294]: Lupin · Greater Nagpur Area,
+          - generic [ref=f4e1295]: 0%
+        - paragraph [ref=f4e1297]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1298]:
+          - button "Auto-apply" [ref=f4e1299] [cursor=pointer]
+          - link "View" [ref=f4e1300] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-officer-lupin-1135368
+      - generic [ref=f4e1301]:
+        - generic [ref=f4e1302]:
+          - generic [ref=f4e1303]:
+            - generic [ref=f4e1304]: OU
+            - generic [ref=f4e1305]:
+              - heading "Project Coordinator" [level=3] [ref=f4e1306]
+              - paragraph [ref=f4e1307]: Outsource Access Careers · Philippines,
+          - generic [ref=f4e1308]: 0%
+        - paragraph [ref=f4e1310]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1311]:
+          - button "Auto-apply" [ref=f4e1312] [cursor=pointer]
+          - link "View" [ref=f4e1313] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-project-coordinator-outsource-access-careers-1135338
+      - generic [ref=f4e1314]:
+        - generic [ref=f4e1315]:
+          - generic [ref=f4e1316]:
+            - generic [ref=f4e1317]: MA
+            - generic [ref=f4e1318]:
+              - heading "Math Teacher" [level=3] [ref=f4e1319]
+              - paragraph [ref=f4e1320]: MatheMagis Singapore Maths · Philippines,
+          - generic [ref=f4e1321]: 0%
+        - paragraph [ref=f4e1323]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1324]:
+          - button "Auto-apply" [ref=f4e1325] [cursor=pointer]
+          - link "View" [ref=f4e1326] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-math-teacher-mathemagis-singapore-maths-1135337
+      - generic [ref=f4e1327]:
+        - generic [ref=f4e1328]:
+          - generic [ref=f4e1329]:
+            - generic [ref=f4e1330]: "24"
+            - generic [ref=f4e1331]:
+              - heading "Australian Bookkeeping Assistant" [level=3] [ref=f4e1332]
+              - paragraph [ref=f4e1333]: 24x7 Direct · Philippines,
+          - generic [ref=f4e1334]: 0%
+        - paragraph [ref=f4e1336]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1337]:
+          - button "Auto-apply" [ref=f4e1338] [cursor=pointer]
+          - link "View" [ref=f4e1339] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-australian-bookkeeping-assistant-24x7-direct-1135336
+      - generic [ref=f4e1340]:
+        - generic [ref=f4e1341]:
+          - generic [ref=f4e1342]:
+            - generic [ref=f4e1343]: TU
+            - generic [ref=f4e1344]:
+              - heading "Profesor a Online para NiÃ±os y Adolescentes" [level=3] [ref=f4e1345]
+              - paragraph [ref=f4e1346]: TUS Media · EspaÃ±a,
+          - generic [ref=f4e1347]: 0%
+        - paragraph [ref=f4e1349]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1350]:
+          - button "Auto-apply" [ref=f4e1351] [cursor=pointer]
+          - link "View" [ref=f4e1352] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-profesor-a-online-para-ninos-y-adolescentes-tus-media-1135317
+      - generic [ref=f4e1353]:
+        - generic [ref=f4e1354]:
+          - generic [ref=f4e1355]:
+            - generic [ref=f4e1356]: CO
+            - generic [ref=f4e1357]:
+              - 'heading "Neuroscientist â Fully" [level=3] [ref=f4e1358]'
+              - paragraph [ref=f4e1359]: CoTrain · United States,
+          - generic [ref=f4e1360]: 0%
+        - paragraph [ref=f4e1362]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1363]:
+          - button "Auto-apply" [ref=f4e1364] [cursor=pointer]
+          - link "View" [ref=f4e1365] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-neuroscientist-fully-cotrain-1135298
+      - generic [ref=f4e1366]:
+        - generic [ref=f4e1367]:
+          - generic [ref=f4e1368]:
+            - generic [ref=f4e1369]: MA
+            - generic [ref=f4e1370]:
+              - heading "Proofreader" [level=3] [ref=f4e1371]
+              - paragraph [ref=f4e1372]: MasteryPrep · Remote - USA,
+          - generic [ref=f4e1373]: 0%
+        - paragraph [ref=f4e1375]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1376]:
+          - button "Auto-apply" [ref=f4e1377] [cursor=pointer]
+          - link "View" [ref=f4e1378] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-proofreader-masteryprep-1135297
+      - generic [ref=f4e1379]:
+        - generic [ref=f4e1380]:
+          - generic [ref=f4e1381]:
+            - generic [ref=f4e1382]: AU
+            - generic [ref=f4e1383]:
+              - heading "Front of House Scoopers Albury" [level=3] [ref=f4e1384]
+              - paragraph [ref=f4e1385]: Augustus Gelatery · Albury,
+          - generic [ref=f4e1386]: 0%
+        - paragraph [ref=f4e1388]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1389]:
+          - button "Auto-apply" [ref=f4e1390] [cursor=pointer]
+          - link "View" [ref=f4e1391] [cursor=pointer]:
+            - /url: https://remoteOK.com/remote-jobs/remote-front-of-house-scoopers-albury-augustus-gelatery-1135308
+      - generic [ref=f4e1392]:
+        - generic [ref=f4e1393]:
+          - generic [ref=f4e1394]:
+            - generic [ref=f4e1395]: ST
+            - generic [ref=f4e1396]:
+              - heading "Patient Care Specialist" [level=3] [ref=f4e1397]
+              - paragraph [ref=f4e1398]: STATLINX · USA
+          - generic [ref=f4e1399]: 0%
+        - paragraph [ref=f4e1401]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1402]:
+          - button "Auto-apply" [ref=f4e1403] [cursor=pointer]
+          - link "View" [ref=f4e1404] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/medical/patient-care-specialist-2091069
+      - generic [ref=f4e1405]:
+        - generic [ref=f4e1406]:
+          - generic [ref=f4e1407]:
+            - generic [ref=f4e1408]: TH
+            - generic [ref=f4e1409]:
+              - heading "Assistant Account Payable" [level=3] [ref=f4e1410]
+              - paragraph [ref=f4e1411]: The Obesity Society · USA
+          - generic [ref=f4e1412]: 0%
+        - paragraph [ref=f4e1414]: General relevance to your profile. Estimated fit 0%.
+        - generic [ref=f4e1415]:
+          - button "Auto-apply" [ref=f4e1416] [cursor=pointer]
+          - link "View" [ref=f4e1417] [cursor=pointer]:
+            - /url: https://remotive.com/remote-jobs/medical/assistant-account-payable-2090989

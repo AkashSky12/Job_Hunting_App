@@ -1,0 +1,17 @@
+# Secrets & local config
+.env
+credentials.json
+token.json
+
+# Local database
+jobhunter.db
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# OS
+.DS_Store

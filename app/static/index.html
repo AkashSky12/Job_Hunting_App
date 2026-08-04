@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sky AI Job Hunter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: '#22d3ee',
+            brand2: '#818cf8',
+            accent: '#f472b6',
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            display: ['Sora', 'Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="/static/theme.css" />
+</head>
+<body class="text-zinc-100 min-h-screen">
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="sidebar w-64 shrink-0 p-5 hidden md:flex flex-col gap-2">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="brand-mark h-10 w-10 rounded-2xl flex items-center justify-center font-extrabold text-lg">SJH</div>
+        <div class="leading-tight">
+          <span class="brand-text font-display font-extrabold text-lg block">Sky Job Hunter</span>
+          <span class="text-[11px] text-zinc-500 tracking-wide uppercase">AI powered</span>
+        </div>
+      </div>
+      <nav id="nav" class="flex flex-col gap-1.5 text-sm">
+        <button data-view="overview" class="navbtn text-left px-3 py-2.5 rounded-xl">
+          <span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg></span> Overview</button>
+        <button data-view="matches" class="navbtn text-left px-3 py-2.5 rounded-xl">
+          <span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .962 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.962 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg></span> Matches</button>
+        <button data-view="applications" class="navbtn text-left px-3 py-2.5 rounded-xl">
+          <span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v18"/><path d="M15 3v18"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span> Applications</button>
+        <button data-view="inbox" class="navbtn text-left px-3 py-2.5 rounded-xl">
+          <span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></span> Inbox</button>
+        <button data-view="sources" class="navbtn text-left px-3 py-2.5 rounded-xl">
+          <span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg></span> Sources</button>
+        <button data-view="profile" class="navbtn text-left px-3 py-2.5 rounded-xl">
+          <span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/></svg></span> Profile</button>
+      </nav>
+      <div class="mt-auto text-xs text-zinc-500">
+        <span id="ai-badge" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg chip"><span class="dot text-emerald-400"></span>AI: —</span>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 min-w-0">
+      <header class="app-header px-6 py-4 flex items-center justify-between sticky top-0 z-10">
+        <h1 id="title" class="text-2xl font-display font-bold">Overview</h1>
+        <div class="flex gap-2">
+          <button onclick="openPalette()" class="btn-ghost px-3.5 py-2.5 text-base text-zinc-300 flex items-center gap-2">
+            <span>Search</span><kbd class="text-sm px-1.5 py-0.5 rounded chip">⌘K</kbd>
+          </button>
+          <button onclick="ingest()" class="btn-ghost px-3.5 py-2.5 text-base">Ingest jobs</button>
+          <button onclick="runMatch()" class="btn-primary px-4 py-2.5 text-base">Run matching</button>
+        </div>
+      </header>
+
+      <div id="toast" class="toast fixed bottom-4 right-4 z-50 hidden px-4 py-2.5 text-sm"></div>
+
+      <!-- Command palette -->
+      <div id="palette" class="fixed inset-0 z-50 hidden bg-black/50 backdrop-blur-sm" onclick="if(event.target===this)closePalette()">
+        <div class="palette-panel max-w-xl mx-auto mt-24 rounded-2xl overflow-hidden">
+          <input id="palette-input" type="text" placeholder="Search jobs or run a command…" aria-label="Command palette"
+            class="w-full px-4 py-3.5 bg-transparent border-b border-white/10 text-sm outline-none" />
+          <div id="palette-results" class="max-h-80 overflow-y-auto p-2 text-sm"></div>
+        </div>
+      </div>
+
+      <section class="p-6">
+        <!-- Overview -->
+        <div id="view-overview" class="view">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6 stagger" id="kpis"></div>
+          <div class="card p-5 mb-4">
+            <h3 class="text-lg font-display font-semibold mb-3">Activity — last 30 days</h3>
+            <div class="chart-wrap">
+              <canvas id="trendChart"></canvas>
+            </div>
+          </div>
+          <div class="grid lg:grid-cols-2 gap-4 stagger">
+            <div class="card p-5">
+              <h3 class="text-lg font-display font-semibold mb-3">Application funnel</h3>
+              <div id="funnel" class="space-y-2.5 text-base"></div>
+            </div>
+            <div class="card p-5">
+              <h3 class="text-lg font-display font-semibold mb-3">Getting started</h3>
+              <ol class="list-decimal list-inside text-base text-zinc-400 space-y-1.5">
+                <li>Upload your CV in <b class="text-zinc-100">Profile</b></li>
+                <li>Click <b class="text-zinc-100">Ingest jobs</b> to pull RemoteOK listings</li>
+                <li>Click <b class="text-zinc-100">Run matching</b> to rank them</li>
+                <li>Auto-apply &amp; track in <b class="text-zinc-100">Applications</b></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- Matches -->
+        <div id="view-matches" class="view hidden">
+          <div class="card p-4 mb-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              <input id="f-role" placeholder="Role or company e.g. python, google" aria-label="Filter by role"
+                class="field px-3 py-2 text-sm" oninput="renderMatches()" />
+              <input id="f-country" placeholder="Country or location e.g. remote, india" aria-label="Filter by country"
+                class="field px-3 py-2 text-sm" oninput="renderMatches()" />
+              <input id="f-salary" type="number" min="0" step="10000" placeholder="Min salary e.g. 80000" aria-label="Minimum salary"
+                class="field px-3 py-2 text-sm" oninput="renderMatches()" />
+              <select id="f-source" aria-label="Filter by source" class="field px-3 py-2 text-sm" onchange="renderMatches()">
+                <option value="">All sources</option>
+              </select>
+              <div class="flex items-center gap-3">
+                <label class="text-xs text-zinc-400 whitespace-nowrap">Min match</label>
+                <input id="f-score" type="range" min="0" max="100" value="0" aria-label="Minimum match percentage" title="Minimum match percentage" class="flex-1 accent-cyan-400" oninput="renderMatches()" />
+                <span id="f-score-val" class="text-xs text-zinc-300 w-8 text-right">0%</span>
+              </div>
+              <label class="flex items-center gap-2 text-sm text-zinc-300 select-none cursor-pointer">
+                <input id="f-remote" type="checkbox" class="accent-cyan-400 w-4 h-4" onchange="renderMatches()" />
+                Remote only
+              </label>
+            </div>
+            <div class="flex items-center justify-between mt-3">
+              <span id="matches-count" class="text-xs text-zinc-500"></span>
+              <button onclick="clearFilters()" class="btn-ghost px-3 py-1.5 text-xs">Clear filters</button>
+            </div>
+          </div>
+          <div id="matches" class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 stagger"></div>
+        </div>
+
+        <!-- Applications (Kanban) -->
+        <div id="view-applications" class="view hidden">
+          <div id="kanban" class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 stagger"></div>
+        </div>
+
+        <!-- Inbox -->
+        <div id="view-inbox" class="view hidden max-w-2xl">
+          <div class="card p-6 space-y-4">
+            <div>
+              <h3 class="font-display font-semibold mb-1">Gmail auto-updates</h3>
+              <p class="text-sm text-zinc-400 mb-3">Pull recent recruiter emails and auto-advance matching applications.</p>
+              <button onclick="gmailSync()" class="btn-ghost px-4 py-2 text-sm">Sync Gmail</button>
+              <span id="gmail-status" class="ml-2 text-xs text-zinc-500"></span>
+            </div>
+            <hr class="border-white/10" />
+            <div>
+              <h3 class="font-display font-semibold mb-1">Paste an email</h3>
+              <p class="text-sm text-zinc-400 mb-3">No Gmail setup needed — paste a recruiter email to classify and auto-update the matching application.</p>
+              <input id="mail-subject" placeholder="Subject" aria-label="Email subject" class="field w-full mb-2 px-3 py-2 text-sm" />
+              <textarea id="mail-body" placeholder="Email body…" aria-label="Email body" rows="5" class="field w-full px-3 py-2 text-sm"></textarea>
+              <button onclick="classifyMail()" class="btn-primary mt-3 px-4 py-2 text-sm">Classify &amp; update</button>
+              <div id="mail-out" class="mt-4 text-sm"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sources -->
+        <div id="view-sources" class="view hidden max-w-3xl">
+          <div class="flex flex-col sm:flex-row gap-2 mb-4">
+            <input id="src-query" placeholder="Role e.g. python developer" aria-label="Role"
+              class="field flex-1 px-3 py-2 text-sm" />
+            <input id="src-loc" placeholder="Location e.g. bangalore" aria-label="Location"
+              class="field flex-1 px-3 py-2 text-sm" />
+            <button onclick="loadSources()" class="btn-primary px-4 py-2 text-sm">Search</button>
+          </div>
+          <div id="sources" class="grid md:grid-cols-2 gap-3 stagger"></div>
+        </div>
+
+        <!-- Profile -->
+        <div id="view-profile" class="view hidden max-w-2xl">
+          <div class="card p-6">
+            <h3 class="font-display font-semibold mb-4">Upload CV</h3>
+            <input id="cv" type="file" accept=".pdf,.docx,.txt,.md" aria-label="CV file"
+              class="block w-full text-sm text-zinc-400 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-gradient-to-r file:from-brand file:to-brand2 file:text-zinc-950 file:font-semibold file:cursor-pointer" />
+            <button onclick="uploadCV()" class="btn-ghost mt-4 px-4 py-2 text-sm">Parse CV</button>
+            <div id="profile-out" class="mt-6 text-sm"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const $ = (s) => document.querySelector(s);
+    const api = (p, o) => fetch(p, o).then(r => r.ok ? r.json() : r.json().then(e => Promise.reject(e)));
+    function toast(msg) { const t = $('#toast'); t.textContent = msg; t.classList.remove('hidden'); setTimeout(() => t.classList.add('hidden'), 2600); }
+
+    // Premium line icons (Lucide-style, stroke = currentColor)
+    const svgIcon = (paths) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${paths}</svg>`;
+    const ICONS = {
+      briefcase: svgIcon('<path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/>'),
+      sparkles: svgIcon('<path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .962 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.962 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/>'),
+      clipboard: svgIcon('<rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/>'),
+      phone: svgIcon('<path d="M13 2a9 9 0 0 1 9 9"/><path d="M13 6a5 5 0 0 1 5 5"/><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>'),
+    };
+
+    const STATUS_COLS = ['applied', 'viewed', 'phone_screen', 'interview', 'offer', 'rejected'];
+
+    // Routing
+    document.querySelectorAll('.navbtn').forEach(b => b.onclick = () => show(b.dataset.view));
+    function show(v) {
+      document.querySelectorAll('.view').forEach(e => e.classList.add('hidden'));
+      $('#view-' + v).classList.remove('hidden');
+      $('#title').textContent = v[0].toUpperCase() + v.slice(1);
+      document.querySelectorAll('.navbtn').forEach(b => b.classList.toggle('active', b.dataset.view === v));
+      if (v === 'overview') loadStats();
+      if (v === 'matches') loadMatches();
+      if (v === 'applications') loadApps();
+      if (v === 'inbox') loadInbox();
+      if (v === 'sources') loadSources();
+      if (v === 'profile') loadProfile();
+    }
+
+    async function loadStats() {
+      const s = await api('/api/stats');
+      $('#ai-badge').innerHTML = `<span class="dot ${s.ai_enabled ? 'text-emerald-400' : 'text-amber-400'}"></span>AI: ` + (s.ai_enabled ? 'on' : 'fallback');
+      const kpis = [
+        ['Jobs', s.jobs, ICONS.briefcase],
+        ['Matches', s.matches, ICONS.sparkles],
+        ['Applications', s.applications, ICONS.clipboard],
+        ['Interviews', (s.funnel.interview || 0) + (s.funnel.phone_screen || 0), ICONS.phone],
+      ];
+      $('#kpis').innerHTML = kpis.map(([k, v, icon]) => `
+        <div class="card kpi p-5">
+          <div class="flex items-center justify-between">
+            <div class="text-sm text-zinc-400">${k}</div>
+            <div class="kpi-icon text-brand">${icon}</div>
+          </div>
+          <div class="kpi-value text-4xl font-display font-extrabold mt-2">${v}</div>
+        </div>`).join('');
+      const funnel = Object.entries(s.funnel);
+      const funnelColors = { applied: '#22d3ee', viewed: '#818cf8', phone_screen: '#f472b6', interview: '#34d399', offer: '#fbbf24', rejected: '#f87171' };
+      $('#funnel').innerHTML = funnel.length ? funnel.map(([k, v]) =>
+        `<div class="flex justify-between items-center"><span class="capitalize text-zinc-400 flex items-center gap-2"><span class="dot" style="color:${funnelColors[k] || '#818cf8'}"></span>${k.replace('_', ' ')}</span><span class="font-semibold">${v}</span></div>`).join('')
+        : '<div class="text-zinc-500">No applications yet.</div>';
+      loadTrend();
+    }
+
+    let trendChart;
+    async function loadTrend() {
+      const data = await api('/api/stats/trend?days=30');
+      const labels = data.map(d => d.day.slice(5));
+      const ctx = $('#trendChart');
+      const h = ctx.height || 240;
+      const grad = (color) => {
+        const g = ctx.getContext('2d').createLinearGradient(0, 0, 0, h);
+        g.addColorStop(0, color + '55');
+        g.addColorStop(1, color + '00');
+        return g;
+      };
+      const mk = (label, key, color) => ({
+        label, data: data.map(d => d[key]), borderColor: color,
+        backgroundColor: grad(color), fill: true, tension: .4, pointRadius: 0, borderWidth: 2.5,
+        pointHoverRadius: 5, pointHoverBackgroundColor: color, pointHoverBorderColor: '#fff', pointHoverBorderWidth: 2,
+      });
+      if (trendChart) trendChart.destroy();
+      trendChart = new Chart(ctx, {
+        type: 'line',
+        data: { labels, datasets: [mk('Applied', 'applied', '#22d3ee'), mk('Interviews', 'interviews', '#818cf8'), mk('Offers', 'offers', '#fbbf24')] },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: { labels: { color: '#9aa3b8', boxWidth: 12, usePointStyle: true, pointStyle: 'circle' } },
+            tooltip: { backgroundColor: 'rgba(18,21,36,.92)', borderColor: 'rgba(255,255,255,.14)', borderWidth: 1, padding: 12, cornerRadius: 10, titleColor: '#fff', bodyColor: '#c7d2fe' },
+          },
+          scales: {
+            x: { ticks: { color: '#71717a', maxTicksLimit: 10 }, grid: { color: 'rgba(255,255,255,.05)' }, border: { display: false } },
+            y: { ticks: { color: '#71717a', precision: 0 }, grid: { color: 'rgba(255,255,255,.05)' }, border: { display: false }, beginAtZero: true },
+          },
+        },
+      });
+    }
+
+    let allMatches = [];
+    async function loadMatches() {
+      allMatches = await api('/api/matches');
+      const sel = $('#f-source');
+      if (sel) {
+        const sources = [...new Set(allMatches.map(j => j.source).filter(Boolean))].sort();
+        sel.innerHTML = '<option value="">All sources</option>' +
+          sources.map(s => `<option value="${esc(s)}">${esc(s)}</option>`).join('');
+      }
+      renderMatches();
+    }
+
+    function fmtSalary(min, max) {
+      const f = (n) => '$' + Math.round(n / 1000) + 'k';
+      if (min && max) return `${f(min)}–${f(max)}`;
+      if (min) return `${f(min)}+`;
+      if (max) return `up to ${f(max)}`;
+      return '';
+    }
+
+    function renderMatches() {
+      const role = ($('#f-role')?.value || '').toLowerCase().trim();
+      const country = ($('#f-country')?.value || '').toLowerCase().trim();
+      const minSalary = parseInt($('#f-salary')?.value || '0', 10) || 0;
+      const source = $('#f-source')?.value || '';
+      const minScore = parseInt($('#f-score')?.value || '0', 10) || 0;
+      const remoteOnly = $('#f-remote')?.checked || false;
+      const scoreVal = $('#f-score-val'); if (scoreVal) scoreVal.textContent = minScore + '%';
+
+      const filtered = allMatches.filter(j => {
+        const pct = Math.round((j.score || 0) * 100);
+        if (pct < minScore) return false;
+        if (role && !`${j.title || ''} ${j.company || ''}`.toLowerCase().includes(role)) return false;
+        if (country && !`${j.location || ''}`.toLowerCase().includes(country)) return false;
+        if (source && j.source !== source) return false;
+        if (remoteOnly && !(j.remote || /remote/i.test(j.location || ''))) return false;
+        if (minSalary) {
+          const jobMax = j.salary_max || j.salary_min || 0;
+          if (jobMax < minSalary) return false;
+        }
+        return true;
+      });
+
+      const countEl = $('#matches-count');
+      if (countEl) countEl.textContent = `${filtered.length} of ${allMatches.length} matches`;
+
+      if (!allMatches.length) { $('#matches').innerHTML = '<div class="text-zinc-500 col-span-full">No matches. Upload a CV, ingest jobs, then run matching.</div>'; return; }
+      if (!filtered.length) { $('#matches').innerHTML = '<div class="text-zinc-500 col-span-full">No matches fit these filters. Try widening them.</div>'; return; }
+
+      $('#matches').innerHTML = filtered.map(j => {
+        const pct = Math.round((j.score || 0) * 100);
+        const applied = j.app_status ? `<span class="text-xs px-2 py-1 rounded-md badge-glow-brand capitalize">${esc(j.app_status).replace('_',' ')}</span>` : '';
+        const initials = (j.company || '?').trim().slice(0, 2).toUpperCase();
+        const salary = fmtSalary(j.salary_min, j.salary_max);
+        const url = j.apply_url || '#';
+        const isRemote = j.remote || /remote/i.test(j.location || '');
+        const titleTag = j.apply_url
+          ? `<a href="${esc(url)}" target="_blank" rel="noopener" class="job-title text-lg font-display font-semibold leading-snug hover:text-brand transition-colors">${esc(j.title)}</a>`
+          : `<h3 class="job-title text-lg font-display font-semibold leading-snug">${esc(j.title)}</h3>`;
+        return `
+        <div class="card p-5 flex flex-col gap-3">
+          <div class="flex justify-between items-start gap-3">
+            <div class="flex gap-3 min-w-0">
+              <div class="kpi-icon shrink-0 font-display font-bold text-brand">${esc(initials)}</div>
+              <div class="min-w-0">${titleTag}
+                <p class="text-base text-zinc-400">${esc(j.company)} · ${esc(j.location)}</p></div>
+            </div>
+            <span class="shrink-0 text-base font-bold px-2.5 py-1 rounded-lg badge-glow-brand">${pct}%</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            ${salary ? `<span class="text-xs px-2 py-0.5 rounded-md badge-glow-brand">${esc(salary)}</span>` : ''}
+            ${isRemote ? '<span class="text-xs px-2 py-0.5 rounded-md badge-glow-indigo">remote</span>' : ''}
+            ${j.source ? `<span class="text-xs px-2 py-0.5 rounded-md badge-glow-muted">${esc(j.source)}</span>` : ''}
+          </div>
+          <div class="bar-track h-2"><div class="bar-fill" style="width:${pct}%"></div></div>
+          <p class="text-base text-zinc-400 line-clamp-2">${esc(j.reasoning || '')}</p>
+          <div class="flex gap-2 mt-auto items-center">
+            <button onclick='applyJob(${JSON.stringify(j.id)})' class="btn-primary px-3.5 py-2 text-base">Auto-apply</button>
+            <a href="${esc(url)}" target="_blank" rel="noopener" class="btn-ghost px-3.5 py-2 text-base">View job →</a>
+            ${applied}
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    function clearFilters() {
+      ['f-role', 'f-country', 'f-salary'].forEach(id => { const el = $('#' + id); if (el) el.value = ''; });
+      const src = $('#f-source'); if (src) src.value = '';
+      const sc = $('#f-score'); if (sc) sc.value = 0;
+      const rm = $('#f-remote'); if (rm) rm.checked = false;
+      renderMatches();
+    }
+
+    async function loadApps() {
+      const apps = await api('/api/applications');
+      const dotColors = { applied: '#22d3ee', viewed: '#818cf8', phone_screen: '#f472b6', interview: '#34d399', offer: '#fbbf24', rejected: '#f87171' };
+      const cols = STATUS_COLS.map(status => {
+        const items = apps.filter(a => a.status === status);
+        return `<div class="kanban-col p-3" data-status="${status}"
+            ondragover="onDragOver(event)" ondragleave="onDragLeave(event)" ondrop="onDrop(event)">
+          <div class="text-sm font-semibold mb-3 capitalize flex justify-between items-center pointer-events-none">
+            <span class="flex items-center gap-2"><span class="dot" style="color:${dotColors[status]}"></span>${status.replace('_', ' ')}</span><span class="text-xs px-1.5 py-0.5 rounded chip text-zinc-400">${items.length}</span></div>
+          <div class="space-y-2 min-h-[40px]">${items.map(a => card(a)).join('') || '<div class="text-xs text-zinc-600 p-2 pointer-events-none">Drop here</div>'}</div>
+        </div>`;
+      }).join('');
+      $('#kanban').innerHTML = cols;
+    }
+    function card(a) {
+      const idx = STATUS_COLS.indexOf(a.status);
+      const next = STATUS_COLS[idx + 1];
+      const prev = STATUS_COLS[idx - 1];
+      return `<div class="kanban-card p-3 text-sm cursor-grab active:cursor-grabbing"
+          draggable="true" data-job-id="${esc(a.job_id)}" ondragstart="onDragStart(event)" ondragend="onDragEnd(event)">
+        <div class="font-medium pointer-events-none">${esc(a.title)}</div>
+        <div class="text-xs text-zinc-400 pointer-events-none">${esc(a.company)}</div>
+        <div class="mt-2 flex gap-3 text-xs">
+          ${prev ? `<button onclick='moveApp(${JSON.stringify(a.job_id)},"${prev}")' class="text-zinc-500 hover:text-zinc-200 transition-colors">← ${prev.replace('_', ' ')}</button>` : ''}
+          ${next ? `<button onclick='moveApp(${JSON.stringify(a.job_id)},"${next}")' class="text-brand hover:brightness-125 transition">→ ${next.replace('_', ' ')}</button>` : ''}
+        </div>
+      </div>`;
+    }
+
+    // --- Drag & drop ---
+    let dragJobId = null;
+    function onDragStart(e) { dragJobId = e.currentTarget.dataset.jobId; e.currentTarget.classList.add('dragging'); e.dataTransfer.effectAllowed = 'move'; }
+    function onDragEnd(e) { e.currentTarget.classList.remove('dragging'); dragJobId = null; }
+    function onDragOver(e) { e.preventDefault(); e.currentTarget.classList.add('drag-over'); }
+    function onDragLeave(e) { e.currentTarget.classList.remove('drag-over'); }
+    async function onDrop(e) {
+      e.preventDefault();
+      e.currentTarget.classList.remove('drag-over');
+      const status = e.currentTarget.dataset.status;
+      if (dragJobId && status) await moveApp(dragJobId, status);
+    }
+
+    async function loadProfile() {
+      const p = await api('/api/profile');
+      if (!p || !p.parsed_json) { $('#profile-out').innerHTML = '<span class="text-zinc-500">No CV uploaded yet.</span>'; return; }
+      const j = p.parsed_json;
+      $('#profile-out').innerHTML = `
+        <div class="space-y-3">
+          <div class="text-base"><b class="font-display">${esc(j.name || '')}</b> <span class="text-zinc-400">· ${esc(j.email || '')}</span></div>
+          <p class="text-zinc-400">${esc(j.summary || '')}</p>
+          <div class="flex flex-wrap gap-1.5">${(j.skills || []).map(s => `<span class="text-xs px-2.5 py-1 rounded-lg badge-glow-indigo">${esc(s)}</span>`).join('')}</div>
+        </div>`;
+    }
+
+    async function uploadCV() {
+      const f = $('#cv').files[0];
+      if (!f) return toast('Choose a file first');
+      const fd = new FormData(); fd.append('file', f);
+      toast('Parsing…');
+      try { await api('/api/profile/upload', { method: 'POST', body: fd }); toast('CV parsed'); loadProfile(); }
+      catch (e) { toast(e.detail || 'Upload failed'); }
+    }
+    async function ingest() { toast('Ingesting…'); try { const r = await api('/api/jobs/ingest', { method: 'POST' }); toast('Ingested ' + r.ingested + ' jobs'); } catch (e) { toast(e.detail || 'Failed'); } }
+    async function runMatch() { toast('Matching…'); try { const r = await api('/api/match', { method: 'POST' }); toast('Ranked ' + r.matched + ' jobs'); show('matches'); } catch (e) { toast(e.detail || 'Failed'); } }
+    async function applyJob(id) { try { await api('/api/applications', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ job_id: id }) }); toast('Applied + cover letter generated'); loadMatches(); } catch (e) { toast(e.detail || 'Failed'); } }
+    async function moveApp(id, status) { await api('/api/applications/status', { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ job_id: id, status }) }); loadApps(); }
+
+    // --- Inbox ---
+    async function loadInbox() {
+      const s = await api('/api/stats');
+      $('#gmail-status').textContent = s.gmail_enabled ? 'Gmail configured' : 'Gmail not configured (paste emails below)';
+    }
+    async function gmailSync() {
+      toast('Syncing Gmail…');
+      try { const r = await api('/api/inbox/gmail-sync', { method: 'POST' }); toast(`Scanned ${r.scanned}, updated ${r.updates.length}`); }
+      catch (e) { toast(e.detail || 'Gmail sync unavailable'); }
+    }
+    async function classifyMail() {
+      const subject = $('#mail-subject').value, body = $('#mail-body').value;
+      if (!subject && !body) return toast('Enter a subject or body');
+      try {
+        const r = await api('/api/inbox/classify', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ subject, body }) });
+        const c = r.classification, u = r.updated;
+        $('#mail-out').innerHTML = `
+          <div class="rounded-xl bg-zinc-900 border border-zinc-800 p-3">
+            <div>Status: <b class="text-brand">${esc(c.status)}</b></div>
+            <div class="text-zinc-400">Company: ${esc(c.company || '—')}</div>
+            ${c.next_action ? `<div class="text-zinc-400">Next: ${esc(c.next_action)}</div>` : ''}
+            <div class="mt-1 text-xs ${u ? 'text-brand' : 'text-zinc-500'}">${u ? 'Updated ' + esc(u.company) + ' → ' + esc(u.status) : 'No matching application found'}</div>
+          </div>`;
+      } catch (e) { toast(e.detail || 'Failed'); }
+    }
+
+    function esc(s) { return String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+
+    // --- Command palette (⌘K) ---
+    const COMMANDS = [
+      { label: 'Go to Overview', run: () => show('overview') },
+      { label: 'Go to Matches', run: () => show('matches') },
+      { label: 'Go to Applications', run: () => show('applications') },
+      { label: 'Go to Inbox', run: () => show('inbox') },
+      { label: 'Go to Sources', run: () => show('sources') },
+      { label: 'Go to Profile', run: () => show('profile') },
+      { label: 'Ingest jobs', run: ingest },
+      { label: 'Run matching', run: runMatch },
+    ];
+    let paletteJobs = [];
+    function openPalette() {
+      $('#palette').classList.remove('hidden');
+      const input = $('#palette-input');
+      input.value = ''; input.focus();
+      renderPalette('');
+      api('/api/matches').then(m => { paletteJobs = m; }).catch(() => {});
+    }
+    function closePalette() { $('#palette').classList.add('hidden'); }
+    function renderPalette(q) {
+      q = q.toLowerCase();
+      const cmds = COMMANDS.filter(c => c.label.toLowerCase().includes(q));
+      const jobs = (q ? paletteJobs.filter(j => (j.title + ' ' + j.company).toLowerCase().includes(q)) : []).slice(0, 8);
+      const row = (label, sub, onclick) => `
+        <button data-action="${onclick}" class="palette-item w-full text-left px-3 py-2 rounded-lg flex justify-between items-center">
+          <span>${esc(label)}</span>${sub ? `<span class="text-xs text-zinc-500">${esc(sub)}</span>` : ''}
+        </button>`;
+      let html = '';
+      if (cmds.length) html += '<div class="text-xs text-zinc-500 px-3 py-1">Commands</div>' +
+        cmds.map((c, i) => row(c.label, '', 'cmd:' + COMMANDS.indexOf(c))).join('');
+      if (jobs.length) html += '<div class="text-xs text-zinc-500 px-3 py-1 mt-1">Jobs</div>' +
+        jobs.map(j => row(j.title, j.company, 'job:' + j.id)).join('');
+      if (!html) html = '<div class="text-zinc-500 px-3 py-4">No results</div>';
+      $('#palette-results').innerHTML = html;
+      document.querySelectorAll('.palette-item').forEach(el => el.onclick = () => runPaletteAction(el.dataset.action));
+    }
+    function runPaletteAction(action) {
+      closePalette();
+      if (action.startsWith('cmd:')) { COMMANDS[+action.slice(4)].run(); }
+      else if (action.startsWith('job:')) { show('matches'); }
+    }
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openPalette(); }
+      if (e.key === 'Escape') closePalette();
+    });
+    $('#palette-input').addEventListener('input', (e) => renderPalette(e.target.value));
+
+    // --- Sources ---
+    async function loadSources() {
+      const q = encodeURIComponent($('#src-query')?.value || '');
+      const loc = encodeURIComponent($('#src-loc')?.value || '');
+      const list = await api(`/api/sources?query=${q}&location=${loc}`);
+      $('#sources').innerHTML = list.map(s => {
+        const badge = s.kind === 'api'
+          ? (s.enabled ? '<span class="text-xs px-2 py-0.5 rounded-md badge-glow-brand">ingested</span>'
+                       : '<span class="text-xs px-2 py-0.5 rounded-md badge-glow-muted">needs key</span>')
+          : '<span class="text-xs px-2 py-0.5 rounded-md badge-glow-indigo">deep link</span>';
+        const action = s.search_url
+          ? `<a href="${esc(s.search_url)}" target="_blank" rel="noopener" class="btn-ghost inline-block px-3 py-1.5 text-sm">Open search →</a>`
+          : `<span class="text-xs text-zinc-500">auto-ingested on “Ingest jobs”</span>`;
+        const initials = (s.name || '?').trim().slice(0, 2).toUpperCase();
+        return `
+        <div class="card p-4 flex flex-col gap-2">
+          <div class="flex justify-between items-start gap-2">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="kpi-icon shrink-0 font-display font-bold text-brand">${esc(initials)}</div>
+              <h3 class="text-lg font-display font-semibold leading-tight truncate">${esc(s.name)}</h3>
+            </div>${badge}
+          </div>
+          <p class="text-sm text-zinc-400">${esc(s.note)}</p>
+          <div class="mt-auto pt-1">${action}</div>
+        </div>`;
+      }).join('');
+    }
+
+    show('overview');
+
+    // --- 3D interactive tilt on cards ---
+    document.addEventListener('pointermove', (e) => {
+      const card = e.target.closest('.card');
+      if (!card) return;
+      const r = card.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width;
+      const py = (e.clientY - r.top) / r.height;
+      const max = 6; // degrees
+      card.style.setProperty('--ry', ((px - 0.5) * max * 2).toFixed(2) + 'deg');
+      card.style.setProperty('--rx', ((0.5 - py) * max * 2).toFixed(2) + 'deg');
+      card.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
+      card.style.setProperty('--my', (py * 100).toFixed(1) + '%');
+    });
+    document.addEventListener('pointerout', (e) => {
+      const card = e.target.closest('.card');
+      if (!card) return;
+      card.style.setProperty('--ry', '0deg');
+      card.style.setProperty('--rx', '0deg');
+    });
+  </script>
+</body>
+</html>

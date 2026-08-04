@@ -1,0 +1,72 @@
+- generic [ref=f4e2]:
+  - complementary [ref=f4e3]:
+    - generic [ref=f4e4]:
+      - generic [ref=f4e5]: JH
+      - generic [ref=f4e6]:
+        - generic [ref=f4e7]: Job Hunter
+        - text: AI powered
+    - navigation [ref=f4e8]:
+      - button "◵ Overview" [ref=f4e9] [cursor=pointer]:
+        - generic [ref=f4e10]: ◵
+        - text: Overview
+      - button "✦ Matches" [ref=f4e11] [cursor=pointer]:
+        - generic [ref=f4e12]: ✦
+        - text: Matches
+      - button "▤ Applications" [active] [ref=f4e13] [cursor=pointer]:
+        - generic [ref=f4e14]: ▤
+        - text: Applications
+      - button "✉ Inbox" [ref=f4e15] [cursor=pointer]:
+        - generic [ref=f4e16]: ✉
+        - text: Inbox
+      - button "⌗ Sources" [ref=f4e17] [cursor=pointer]:
+        - generic [ref=f4e18]: ⌗
+        - text: Sources
+      - button "◉ Profile" [ref=f4e19] [cursor=pointer]:
+        - generic [ref=f4e20]: ◉
+        - text: Profile
+    - generic [ref=f4e21]: "AI: fallback"
+  - main [ref=f4e24]:
+    - generic [ref=f4e25]:
+      - heading "Applications" [level=1] [ref=f4e1418]
+      - generic [ref=f4e27]:
+        - button "Search ⌘K" [ref=f4e28] [cursor=pointer]:
+          - generic [ref=f4e29]: Search
+          - generic [ref=f4e30]: ⌘K
+        - button "Ingest jobs" [ref=f4e31] [cursor=pointer]
+        - button "Run matching" [ref=f4e32] [cursor=pointer]
+    - generic [ref=f4e1420]:
+      - generic [ref=f4e1421]:
+        - generic:
+          - generic: applied
+          - generic: "0"
+        - generic [ref=f4e1422]: Drop here
+      - generic [ref=f4e1423]:
+        - generic:
+          - generic: viewed
+          - generic: "0"
+        - generic [ref=f4e1424]: Drop here
+      - generic [ref=f4e1425]:
+        - generic:
+          - generic: phone screen
+          - generic: "0"
+        - generic [ref=f4e1426]: Drop here
+      - generic [ref=f4e1427]:
+        - generic:
+          - generic: interview
+          - generic: "1"
+        - generic [ref=f4e1429]:
+          - generic: ADVPL JÃºnior
+          - generic: TOTVS
+          - generic [ref=f4e1430]:
+            - button "← phone screen" [ref=f4e1431] [cursor=pointer]
+            - button "→ offer" [ref=f4e1432] [cursor=pointer]
+      - generic [ref=f4e1433]:
+        - generic:
+          - generic: offer
+          - generic: "0"
+        - generic [ref=f4e1434]: Drop here
+      - generic [ref=f4e1435]:
+        - generic:
+          - generic: rejected
+          - generic: "0"
+        - generic [ref=f4e1436]: Drop here

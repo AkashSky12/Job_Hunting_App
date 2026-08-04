@@ -1,0 +1,21 @@
+services:
+  jobhunter:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      # All optional — omit to run in zero-config fallback mode.
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_CHAT_MODEL: ${OPENAI_CHAT_MODEL:-gpt-4o-mini}
+      OPENAI_EMBED_MODEL: ${OPENAI_EMBED_MODEL:-text-embedding-3-small}
+      ADZUNA_APP_ID: ${ADZUNA_APP_ID:-}
+      ADZUNA_APP_KEY: ${ADZUNA_APP_KEY:-}
+      ADZUNA_COUNTRY: ${ADZUNA_COUNTRY:-gb}
+      ADZUNA_QUERY: ${ADZUNA_QUERY:-software engineer}
+      DATABASE_PATH: /data/jobhunter.db
+    volumes:
+      - jobhunter-data:/data
+    restart: unless-stopped
+
+volumes:
+  jobhunter-data:

@@ -1,0 +1,50 @@
+- generic [ref=e2]:
+  - complementary [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]: JH
+      - generic [ref=e6]: Job Hunter
+    - navigation [ref=e7]:
+      - button "Overview" [active] [ref=e8] [cursor=pointer]
+      - button "Matches" [ref=e9] [cursor=pointer]
+      - button "Applications" [ref=e10] [cursor=pointer]
+      - button "Inbox" [ref=e11] [cursor=pointer]
+      - button "Sources" [ref=e12] [cursor=pointer]
+      - button "Profile" [ref=e13] [cursor=pointer]
+    - generic [ref=e14]: "AI: fallback"
+  - main [ref=e16]:
+    - generic [ref=e17]:
+      - heading "Overview" [level=1] [ref=e3204]
+      - generic [ref=e19]:
+        - button "Search ⌘K" [ref=e20] [cursor=pointer]:
+          - generic [ref=e21]: Search
+          - generic [ref=e22]: ⌘K
+        - button "Ingest jobs" [ref=e23] [cursor=pointer]
+        - button "Run matching" [ref=e24] [cursor=pointer]
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - generic [ref=e3205]:
+          - generic [ref=e3206]: Jobs
+          - generic [ref=e3207]: "98"
+        - generic [ref=e3208]:
+          - generic [ref=e3209]: Matches
+          - generic [ref=e3210]: "98"
+        - generic [ref=e3211]:
+          - generic [ref=e3212]: Applications
+          - generic [ref=e3213]: "1"
+        - generic [ref=e3214]:
+          - generic [ref=e3215]: Interviews
+          - generic [ref=e3216]: "1"
+      - heading "Activity — last 30 days" [level=3] [ref=e41]
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - heading "Application funnel" [level=3] [ref=e45]
+          - generic [ref=e3217]:
+            - generic [ref=e3218]: interview
+            - generic [ref=e3219]: "1"
+        - generic [ref=e50]:
+          - heading "Getting started" [level=3] [ref=e51]
+          - list [ref=e52]:
+            - listitem [ref=e53]: Upload your CV in Profile
+            - listitem [ref=e54]: Click Ingest jobs to pull RemoteOK listings
+            - listitem [ref=e55]: Click Run matching to rank them
+            - listitem [ref=e56]: Auto-apply & track in Applications

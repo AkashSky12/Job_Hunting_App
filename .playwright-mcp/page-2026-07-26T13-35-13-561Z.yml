@@ -1,0 +1,52 @@
+- generic [ref=f18e2]:
+  - complementary [ref=f18e3]:
+    - generic [ref=f18e4]:
+      - generic [ref=f18e5]: SJH
+      - generic [ref=f18e6]:
+        - generic [ref=f18e7]: Sky Job Hunter
+        - text: AI powered
+    - navigation [ref=f18e8]:
+      - button [ref=f18e9] [cursor=pointer]
+      - button [ref=f18e16] [cursor=pointer]
+      - button [ref=f18e20] [cursor=pointer]
+      - button [ref=f18e24] [cursor=pointer]
+      - button [ref=f18e29] [cursor=pointer]
+      - button [ref=f18e37] [cursor=pointer]
+    - generic [ref=f18e43]: "AI: fallback"
+  - main [ref=f18e46]:
+    - generic [ref=f18e47]:
+      - heading "Overview" [level=1] [ref=f18e48]
+      - generic [ref=f18e49]:
+        - button "Search ⌘K" [ref=f18e50] [cursor=pointer]:
+          - generic [ref=f18e51]: Search
+          - generic [ref=f18e52]: ⌘K
+        - button "Ingest jobs" [ref=f18e53] [cursor=pointer]
+        - button "Run matching" [ref=f18e54] [cursor=pointer]
+    - generic [ref=f18e56]:
+      - generic [ref=f18e57]:
+        - generic [ref=f18e58]:
+          - generic [ref=f18e59]: Jobs
+          - generic [ref=f18e65]: "98"
+        - generic [ref=f18e66]:
+          - generic [ref=f18e67]: Matches
+          - generic [ref=f18e72]: "98"
+        - generic [ref=f18e73]:
+          - generic [ref=f18e74]: Applications
+          - generic [ref=f18e80]: "1"
+        - generic [ref=f18e81]:
+          - generic [ref=f18e82]: Interviews
+          - generic [ref=f18e89]: "1"
+      - heading "Activity — last 30 days" [level=3] [ref=f18e91]
+      - generic [ref=f18e94]:
+        - generic [ref=f18e95]:
+          - heading "Application funnel" [level=3] [ref=f18e96]
+          - generic [ref=f18e98]:
+            - generic [ref=f18e99]: interview
+            - generic [ref=f18e101]: "1"
+        - generic [ref=f18e102]:
+          - heading "Getting started" [level=3] [ref=f18e103]
+          - list [ref=f18e104]:
+            - listitem [ref=f18e105]: Upload your CV in Profile
+            - listitem [ref=f18e106]: Click Ingest jobs to pull RemoteOK listings
+            - listitem [ref=f18e107]: Click Run matching to rank them
+            - listitem [ref=f18e108]: Auto-apply & track in Applications

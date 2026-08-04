@@ -1,0 +1,72 @@
+- generic [ref=f4e2]:
+  - complementary [ref=f4e3]:
+    - generic [ref=f4e4]:
+      - generic [ref=f4e5]: JH
+      - generic [ref=f4e6]:
+        - generic [ref=f4e7]: Job Hunter
+        - text: AI powered
+    - navigation [ref=f4e8]:
+      - button "◵ Overview" [ref=f4e9] [cursor=pointer]:
+        - generic [ref=f4e10]: ◵
+        - text: Overview
+      - button "✦ Matches" [ref=f4e11] [cursor=pointer]:
+        - generic [ref=f4e12]: ✦
+        - text: Matches
+      - button "▤ Applications" [ref=f4e13] [cursor=pointer]:
+        - generic [ref=f4e14]: ▤
+        - text: Applications
+      - button "✉ Inbox" [ref=f4e15] [cursor=pointer]:
+        - generic [ref=f4e16]: ✉
+        - text: Inbox
+      - button "⌗ Sources" [ref=f4e17] [cursor=pointer]:
+        - generic [ref=f4e18]: ⌗
+        - text: Sources
+      - button "◉ Profile" [ref=f4e19] [cursor=pointer]:
+        - generic [ref=f4e20]: ◉
+        - text: Profile
+    - generic [ref=f4e21]: "AI: fallback"
+  - main [ref=f4e24]:
+    - generic [ref=f4e25]:
+      - heading "Overview" [level=1] [ref=f4e26]
+      - generic [ref=f4e27]:
+        - button "Search ⌘K" [ref=f4e28] [cursor=pointer]:
+          - generic [ref=f4e29]: Search
+          - generic [ref=f4e30]: ⌘K
+        - button "Ingest jobs" [ref=f4e31] [cursor=pointer]
+        - button "Run matching" [ref=f4e32] [cursor=pointer]
+    - generic [ref=f4e34]:
+      - generic [ref=f4e35]:
+        - generic [ref=f4e36]:
+          - generic [ref=f4e37]:
+            - generic [ref=f4e38]: Jobs
+            - generic [ref=f4e39]: ⌗
+          - generic [ref=f4e40]: "98"
+        - generic [ref=f4e41]:
+          - generic [ref=f4e42]:
+            - generic [ref=f4e43]: Matches
+            - generic [ref=f4e44]: ✦
+          - generic [ref=f4e45]: "98"
+        - generic [ref=f4e46]:
+          - generic [ref=f4e47]:
+            - generic [ref=f4e48]: Applications
+            - generic [ref=f4e49]: ▤
+          - generic [ref=f4e50]: "1"
+        - generic [ref=f4e51]:
+          - generic [ref=f4e52]:
+            - generic [ref=f4e53]: Interviews
+            - generic [ref=f4e54]: ☎
+          - generic [ref=f4e55]: "1"
+      - heading "Activity — last 30 days" [level=3] [ref=f4e57]
+      - generic [ref=f4e60]:
+        - generic [ref=f4e61]:
+          - heading "Application funnel" [level=3] [ref=f4e62]
+          - generic [ref=f4e64]:
+            - generic [ref=f4e65]: interview
+            - generic [ref=f4e67]: "1"
+        - generic [ref=f4e68]:
+          - heading "Getting started" [level=3] [ref=f4e69]
+          - list [ref=f4e70]:
+            - listitem [ref=f4e71]: Upload your CV in Profile
+            - listitem [ref=f4e72]: Click Ingest jobs to pull RemoteOK listings
+            - listitem [ref=f4e73]: Click Run matching to rank them
+            - listitem [ref=f4e74]: Auto-apply & track in Applications

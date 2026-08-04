@@ -1,0 +1,103 @@
+- generic [ref=e2]:
+  - complementary [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]: JH
+      - generic [ref=e6]: Job Hunter
+    - navigation [ref=e7]:
+      - button "Overview" [ref=e8] [cursor=pointer]
+      - button "Matches" [ref=e9] [cursor=pointer]
+      - button "Applications" [ref=e10] [cursor=pointer]
+      - button "Inbox" [ref=e11] [cursor=pointer]
+      - button "Sources" [active] [ref=e12] [cursor=pointer]
+      - button "Profile" [ref=e13] [cursor=pointer]
+    - generic [ref=e14]: "AI: fallback"
+  - main [ref=e16]:
+    - generic [ref=e17]:
+      - heading "Sources" [level=1] [ref=e57]
+      - generic [ref=e19]:
+        - button "Search ⌘K" [ref=e20] [cursor=pointer]:
+          - generic [ref=e21]: Search
+          - generic [ref=e22]: ⌘K
+        - button "Ingest jobs" [ref=e23] [cursor=pointer]
+        - button "Run matching" [ref=e24] [cursor=pointer]
+    - generic [ref=e58]:
+      - generic [ref=e59]:
+        - textbox "Role" [ref=e60]:
+          - /placeholder: Role e.g. python developer
+        - textbox "Location" [ref=e61]:
+          - /placeholder: Location e.g. bangalore
+        - button "Search" [ref=e62] [cursor=pointer]
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - generic [ref=e65]:
+            - heading "RemoteOK" [level=3] [ref=e66]
+            - generic [ref=e67]: ingested
+          - paragraph [ref=e68]: Public API — no key required.
+          - generic [ref=e69]: auto-ingested on “Ingest jobs”
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - heading "Remotive" [level=3] [ref=e72]
+            - generic [ref=e73]: ingested
+          - paragraph [ref=e74]: Public API — no key required.
+          - generic [ref=e75]: auto-ingested on “Ingest jobs”
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - heading "Adzuna" [level=3] [ref=e78]
+            - generic [ref=e79]: needs key
+          - paragraph [ref=e80]: Set ADZUNA_APP_ID / ADZUNA_APP_KEY to enable.
+          - generic [ref=e81]: auto-ingested on “Ingest jobs”
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - heading "JSearch (LinkedIn · Indeed · Glassdoor · ZipRecruiter)" [level=3] [ref=e84]
+            - generic [ref=e85]: ingested
+          - paragraph [ref=e86]: Aggregator API. Set RAPIDAPI_KEY to enable.
+          - generic [ref=e87]: auto-ingested on “Ingest jobs”
+        - generic [ref=e88]:
+          - generic [ref=e89]:
+            - heading "LinkedIn" [level=3] [ref=e90]
+            - generic [ref=e91]: deep link
+          - paragraph [ref=e92]: Opens the platform's job search (no public API available).
+          - link "Open search →" [ref=e94] [cursor=pointer]:
+            - /url: https://www.linkedin.com/jobs/search/?keywords=software+engineer&location=remote
+        - generic [ref=e95]:
+          - generic [ref=e96]:
+            - heading "Indeed" [level=3] [ref=e97]
+            - generic [ref=e98]: deep link
+          - paragraph [ref=e99]: Opens the platform's job search (no public API available).
+          - link "Open search →" [ref=e101] [cursor=pointer]:
+            - /url: https://www.indeed.com/jobs?q=software+engineer&l=remote
+        - generic [ref=e102]:
+          - generic [ref=e103]:
+            - heading "Naukri" [level=3] [ref=e104]
+            - generic [ref=e105]: deep link
+          - paragraph [ref=e106]: Opens the platform's job search (no public API available).
+          - link "Open search →" [ref=e108] [cursor=pointer]:
+            - /url: https://www.naukri.com/software-engineer-jobs-in-remote
+        - generic [ref=e109]:
+          - generic [ref=e110]:
+            - heading "Foundit" [level=3] [ref=e111]
+            - generic [ref=e112]: deep link
+          - paragraph [ref=e113]: Opens the platform's job search (no public API available).
+          - link "Open search →" [ref=e115] [cursor=pointer]:
+            - /url: https://www.foundit.in/srp/results?query=software+engineer&locations=remote
+        - generic [ref=e116]:
+          - generic [ref=e117]:
+            - heading "JobStreet" [level=3] [ref=e118]
+            - generic [ref=e119]: deep link
+          - paragraph [ref=e120]: Opens the platform's job search (no public API available).
+          - link "Open search →" [ref=e122] [cursor=pointer]:
+            - /url: https://www.jobstreet.com/software-engineer-jobs/in-remote
+        - generic [ref=e123]:
+          - generic [ref=e124]:
+            - heading "Instahyre" [level=3] [ref=e125]
+            - generic [ref=e126]: deep link
+          - paragraph [ref=e127]: Opens the platform's job search (no public API available).
+          - link "Open search →" [ref=e129] [cursor=pointer]:
+            - /url: https://www.instahyre.com/search-jobs/?q=software+engineer
+        - generic [ref=e130]:
+          - generic [ref=e131]:
+            - heading "Cutshort" [level=3] [ref=e132]
+            - generic [ref=e133]: deep link
+          - paragraph [ref=e134]: Opens the platform's job search (no public API available).
+          - link "Open search →" [ref=e136] [cursor=pointer]:
+            - /url: https://cutshort.io/jobs/software-engineer-jobs
