@@ -91,6 +91,36 @@ struct ParsedCV: Codable {
 struct IngestResponse: Codable { var ok: Bool = false; var ingested: Int = 0 }
 struct MatchResponse: Codable { var ok: Bool = false; var matched: Int = 0 }
 
+struct AutoSearchRequest: Encodable {
+    var keywords: [String]
+    var exclude: [String] = []
+    var location: String?
+}
+
+struct AutoSearchResponse: Codable {
+    var ok: Bool = false
+    var ingested: Int = 0
+    var perBoard: [String: Int] = [:]
+    var errors: [String: String] = [:]
+
+    enum CodingKeys: String, CodingKey {
+        case ok, ingested, errors
+        case perBoard = "per_board"
+    }
+}
+
+struct AutoApplyRequest: Encodable {
+    var jobId: String
+    var submit = false
+
+    enum CodingKeys: String, CodingKey {
+        case submit
+        case jobId = "job_id"
+    }
+}
+
+struct AutoApplyResponse: Codable { var ok: Bool = false; var headless: Bool = false }
+
 struct JobSource: Codable, Identifiable {
     var key: String = ""
     var name: String = ""

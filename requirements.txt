@@ -6,6 +6,8 @@ pypdf>=5.1
 python-docx>=1.1
 # Optional: enables higher-quality AI matching + CV structuring when OPENAI_API_KEY is set
 openai>=1.59
+# Optional: assisted auto-apply (then run: playwright install chromium)
+# playwright>=1.47
 # Optional: Gmail status auto-updates (uncomment to enable, then add credentials.json)
 # google-api-python-client>=2.0
 # google-auth-oauthlib>=1.0

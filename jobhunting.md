@@ -1,6 +1,7 @@
 # AI-Automated Job Hunting Portal — Complete Build Guide
 
 A step-by-step blueprint to build a full-stack, AI-powered job hunting portal that:
+
 - Parses your CV
 - Matches jobs to your profile using AI
 - Auto-applies where possible
@@ -27,6 +28,7 @@ flowchart LR
 ```
 
 **Core services**
+
 1. **Frontend (Dashboard)** — Next.js 14 + Tailwind + shadcn/ui + Framer Motion
 2. **Backend API** — FastAPI (Python) or NestJS (Node)
 3. **AI Layer** — OpenAI / Anthropic / local LLM (Ollama) + embeddings
@@ -40,21 +42,22 @@ flowchart LR
 
 ## 2. Tech Stack (Recommended)
 
-| Layer | Choice | Why |
-|---|---|---|
-| Frontend | Next.js 14 (App Router), TypeScript | SSR, great DX |
-| UI Kit | Tailwind CSS + shadcn/ui + Radix | Beautiful, accessible |
-| Animations | Framer Motion | Smooth micro-interactions |
-| Charts | Recharts / Tremor | Dashboard visuals |
-| Backend | FastAPI + Pydantic v2 | Async, typed, fast |
-| DB | PostgreSQL + pgvector | Relational + vector search |
-| ORM | SQLAlchemy 2.0 / Prisma | Type-safe |
-| Queue | Celery + Redis | Background auto-apply |
-| AI | OpenAI GPT-4o + `text-embedding-3-large` | Best matching quality |
-| Scraping | Playwright + Scrapy | JS-heavy sites |
-| Auth | Clerk (fastest) or Auth.js | Social + magic link |
-| Hosting | Vercel (FE) + Railway/Fly.io (BE) | Zero-config |
-| Monitoring | Sentry + PostHog | Errors + product analytics |
+
+| Layer      | Choice                                  | Why                        |
+| ------------ | ----------------------------------------- | ---------------------------- |
+| Frontend   | Next.js 14 (App Router), TypeScript     | SSR, great DX              |
+| UI Kit     | Tailwind CSS + shadcn/ui + Radix        | Beautiful, accessible      |
+| Animations | Framer Motion                           | Smooth micro-interactions  |
+| Charts     | Recharts / Tremor                       | Dashboard visuals          |
+| Backend    | FastAPI + Pydantic v2                   | Async, typed, fast         |
+| DB         | PostgreSQL + pgvector                   | Relational + vector search |
+| ORM        | SQLAlchemy 2.0 / Prisma                 | Type-safe                  |
+| Queue      | Celery + Redis                          | Background auto-apply      |
+| AI         | OpenAI GPT-4o +`text-embedding-3-large` | Best matching quality      |
+| Scraping   | Playwright + Scrapy                     | JS-heavy sites             |
+| Auth       | Clerk (fastest) or Auth.js              | Social + magic link        |
+| Hosting    | Vercel (FE) + Railway/Fly.io (BE)       | Zero-config                |
+| Monitoring | Sentry + PostHog                        | Errors + product analytics |
 
 ---
 
@@ -162,6 +165,7 @@ CREATE TABLE applications (
 ## 5. CV Parsing Pipeline
 
 ### 5.1 Extract text
+
 ```python
 # apps/api/services/cv_parser.py
 from pypdf import PdfReader
@@ -176,6 +180,7 @@ def extract_text(path: str) -> str:
 ```
 
 ### 5.2 Structure with LLM
+
 ```python
 from openai import OpenAI
 import json
@@ -203,6 +208,7 @@ def parse_cv(text: str) -> dict:
 ```
 
 ### 5.3 Create profile embedding
+
 ```python
 def embed(text: str) -> list[float]:
     r = client.embeddings.create(model="text-embedding-3-large", input=text)
@@ -214,12 +220,14 @@ def embed(text: str) -> list[float]:
 ## 6. Job Ingestion
 
 ### 6.1 Sources
+
 - **APIs**: LinkedIn Jobs API (partner), Adzuna, Reed, Greenhouse Board, Lever, Ashby, USAJobs, RemoteOK, Remotive
 - **Scrapers**: Playwright for LinkedIn, Indeed, Wellfound, YCombinator Work-at-a-Startup
 
 > **Legal note**: Always respect `robots.txt`, ToS, and rate limits. Prefer official APIs and public job boards. Scraping LinkedIn may violate their ToS — use partner APIs or user-authorized flows.
 
 ### 6.2 Example scraper (RemoteOK — public API)
+
 ```python
 import httpx
 async def fetch_remoteok():
@@ -238,6 +246,7 @@ async def fetch_remoteok():
 ```
 
 ### 6.3 Celery task
+
 ```python
 @celery.task
 def ingest_jobs():
@@ -283,6 +292,7 @@ def match_jobs(user_id: str, top_k: int = 50):
 ```
 
 ### 7.2 Score weighting
+
 `final = 0.5 * semantic + 0.3 * llm_score + 0.1 * salary_fit + 0.1 * location_fit`
 
 ---
@@ -290,6 +300,7 @@ def match_jobs(user_id: str, top_k: int = 50):
 ## 8. Auto-Apply Bot
 
 ### 8.1 Strategy
+
 1. **One-click boards** (Greenhouse, Lever, Ashby, Workable): use their public JSON endpoints
 2. **LinkedIn Easy Apply**: Playwright with the user's own session cookie (user-authorized)
 3. **Everything else**: Generate tailored cover letter + CV, then email or open in browser for user review
@@ -325,6 +336,7 @@ async def apply_greenhouse(job_url, profile, cv_path, cover_letter):
 ```
 
 ### 8.4 Safety rails
+
 - **Daily cap** (e.g. 20 apps/day)
 - **Human-in-the-loop mode**: queue → user approves → submit
 - **Blocklist** companies / recruiters
@@ -335,9 +347,11 @@ async def apply_greenhouse(job_url, profile, cv_path, cover_letter):
 ## 9. Application Tracking
 
 ### 9.1 Status pipeline
+
 `queued → applied → viewed → phone_screen → interview → offer → accepted/rejected/ghosted`
 
 ### 9.2 Auto-update sources
+
 - **Gmail API** — parse recruiter emails, classify with LLM into status events
 - **Calendar API** — detect scheduled interviews
 - **LinkedIn InMail** — via user OAuth
@@ -352,6 +366,7 @@ def classify_email(subject, body):
 ```
 
 ### 9.3 Timeline event
+
 ```python
 db.applications.update(id=..., events=append({
     "type": "interview_scheduled",
@@ -366,16 +381,19 @@ db.applications.update(id=..., events=append({
 ## 10. Dashboard UI/UX
 
 ### 10.1 Pages
-| Route | Purpose |
-|---|---|
-| `/` | Overview: KPIs, funnel, upcoming interviews |
-| `/matches` | Ranked job feed with match % and reasoning |
-| `/applications` | Kanban board (drag between statuses) |
-| `/inbox` | Unified email/message thread per application |
-| `/profile` | CV upload, target roles, salary, preferences |
-| `/settings` | Auto-apply rules, quotas, integrations |
+
+
+| Route           | Purpose                                      |
+| ----------------- | ---------------------------------------------- |
+| `/`             | Overview: KPIs, funnel, upcoming interviews  |
+| `/matches`      | Ranked job feed with match % and reasoning   |
+| `/applications` | Kanban board (drag between statuses)         |
+| `/inbox`        | Unified email/message thread per application |
+| `/profile`      | CV upload, target roles, salary, preferences |
+| `/settings`     | Auto-apply rules, quotas, integrations       |
 
 ### 10.2 Design system
+
 - **Layout**: sidebar + top bar, max-width 1440
 - **Type**: Inter or Geist Sans
 - **Color**: neutral base + one accent (e.g. emerald or indigo)
@@ -384,6 +402,7 @@ db.applications.update(id=..., events=append({
 - **Dark mode**: first-class via `next-themes`
 
 ### 10.3 Key components (shadcn/ui)
+
 `Card`, `Badge`, `Progress`, `Sheet`, `Dialog`, `DataTable`, `Command` (⌘K), `Toast`, `Tabs`
 
 ### 10.4 Match card example (React)
@@ -426,6 +445,7 @@ export function JobMatchCard({ job }: { job: Match }) {
 ```
 
 ### 10.5 Kanban for applications
+
 Use `@dnd-kit/core` — columns per status, drag cards to update.
 
 ### 10.6 KPI dashboard (Tremor)
@@ -441,6 +461,7 @@ import { Card, Metric, Text, AreaChart } from "@tremor/react";
 ```
 
 ### 10.7 UX polish checklist
+
 - ⌘K command palette (search jobs, jump to app)
 - Optimistic UI on status changes
 - Empty states with illustrations
@@ -451,6 +472,7 @@ import { Card, Metric, Text, AreaChart } from "@tremor/react";
 ---
 
 ## 11. Notifications
+
 - **Email**: Resend / Postmark — daily digest + interview reminders
 - **Push**: Web Push (VAPID) for status changes
 - **Slack**: incoming webhook for high-match jobs (≥ 90%)
@@ -480,14 +502,15 @@ import { Card, Metric, Text, AreaChart } from "@tremor/react";
 
 ## 14. Development Roadmap
 
-| Phase | Duration | Deliverables |
-|---|---|---|
-| **MVP** | 2 weeks | CV upload → parse → match against RemoteOK → dashboard feed |
-| **v0.2** | +1 week | Application tracker + manual status updates |
-| **v0.3** | +2 weeks | Auto-apply for Greenhouse/Lever + tailored cover letters |
-| **v0.4** | +1 week | Gmail integration for status auto-updates |
-| **v0.5** | +2 weeks | Full Kanban, analytics, notifications, mobile |
-| **v1.0** | +1 week | Auth, billing, polish, deploy |
+
+| Phase    | Duration | Deliverables                                                   |
+| ---------- | ---------- | ---------------------------------------------------------------- |
+| **MVP**  | 2 weeks  | CV upload → parse → match against RemoteOK → dashboard feed |
+| **v0.2** | +1 week  | Application tracker + manual status updates                    |
+| **v0.3** | +2 weeks | Auto-apply for Greenhouse/Lever + tailored cover letters       |
+| **v0.4** | +1 week  | Gmail integration for status auto-updates                      |
+| **v0.5** | +2 weeks | Full Kanban, analytics, notifications, mobile                  |
+| **v1.0** | +1 week  | Auth, billing, polish, deploy                                  |
 
 ---
 
@@ -511,6 +534,7 @@ pnpm dev
 ```
 
 `docker-compose.yml`:
+
 ```yaml
 services:
   postgres:

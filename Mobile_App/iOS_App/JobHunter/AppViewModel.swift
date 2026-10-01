@@ -12,6 +12,7 @@ final class AppViewModel: ObservableObject {
     @Published var applications: [Application] = []
     @Published var profile: Profile?
     @Published var sources: [JobSource] = []
+    @Published var autoSearchResult: AutoSearchResponse?
 
     let statusColumns = ["applied", "viewed", "phone_screen", "interview", "offer", "rejected"]
 
@@ -47,6 +48,31 @@ final class AppViewModel: ObservableObject {
         run {
             let r = try await self.api.ingest()
             self.message = "Ingested \(r.ingested) jobs"
+        }
+    }
+
+    private func splitTerms(_ s: String) -> [String] {
+        s.split(separator: ",").map { $0.trimmingCharacters(in: .whitespaces) }.filter { !$0.isEmpty }
+    }
+
+    func autoSearch(keywords: String, exclude: String, location: String) {
+        let kw = splitTerms(keywords)
+        guard !kw.isEmpty else { message = "Enter at least one keyword"; return }
+        let loc = location.trimmingCharacters(in: .whitespaces)
+        let req = AutoSearchRequest(keywords: kw, exclude: splitTerms(exclude), location: loc.isEmpty ? nil : loc)
+        run {
+            let r = try await self.api.autoSearch(req)
+            self.autoSearchResult = r
+            let failed = r.errors.isEmpty ? "" : " (\(r.errors.count) board(s) failed)"
+            self.message = "Auto-search stored \(r.ingested) jobs\(failed)"
+        }
+    }
+
+    func autoApply(_ jobId: String) {
+        run {
+            let r = try await self.api.autoApply(jobId: jobId)
+            let place = r.headless ? "in the background" : "in a browser on your computer"
+            self.message = "Pre-filling application \(place). Review and submit there."
         }
     }
 

@@ -93,3 +93,21 @@ data class StatusRequest(
     val status: String,
 )
 data class ClassifyRequest(val subject: String, val body: String)
+
+data class AutoSearchRequest(
+    val keywords: List<String>,
+    val exclude: List<String> = emptyList(),
+    val location: String? = null,
+)
+data class AutoSearchResponse(
+    val ok: Boolean = false,
+    val ingested: Int = 0,
+    @SerializedName("per_board") val perBoard: Map<String, Int> = emptyMap(),
+    val errors: Map<String, String> = emptyMap(),
+)
+
+data class AutoApplyRequest(
+    @SerializedName("job_id") val jobId: String,
+    val submit: Boolean = false,
+)
+data class AutoApplyResponse(val ok: Boolean = false, val headless: Boolean = false)

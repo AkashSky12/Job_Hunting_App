@@ -45,7 +45,9 @@ struct MatchesView: View {
                         LazyVStack(spacing: 14) {
                             filterCard
                             ForEach(filtered) { match in
-                                MatchRow(match: match, isRemote: isRemote(match)) { vm.applyToJob(match.id) }
+                                MatchRow(match: match, isRemote: isRemote(match),
+                                         onApply: { vm.applyToJob(match.id) },
+                                         onAutoFill: { vm.autoApply(match.id) })
                             }
                         }
                         .padding()
@@ -89,6 +91,7 @@ struct MatchRow: View {
     let match: Match
     var isRemote: Bool = false
     let onApply: () -> Void
+    let onAutoFill: () -> Void
     @Environment(\.openURL) private var openURL
 
     private var pct: Int { min(max(Int(match.score * 100), 0), 100) }
@@ -137,17 +140,25 @@ struct MatchRow: View {
             if let reasoning = match.reasoning {
                 Text(reasoning).font(.subheadline).foregroundStyle(.secondary).lineLimit(2)
             }
-            HStack(spacing: 10) {
-                Button("Auto-apply", action: onApply).buttonStyle(.borderedProminent)
-                if match.applyUrl != nil {
-                    Button("View job →") { openJob() }.buttonStyle(.bordered)
-                }
-                if let status = match.appStatus {
-                    Text(status).font(.caption).foregroundStyle(Palette.brand)
-                }
+            ViewThatFits {
+                HStack(spacing: 10) { actionButtons }
+                VStack(alignment: .leading, spacing: 8) { actionButtons }
             }
         }
         .cardStyle()
+    }
+
+    @ViewBuilder private var actionButtons: some View {
+        Button("Auto-fill", action: onAutoFill)
+            .buttonStyle(.borderedProminent)
+            .disabled(match.applyUrl == nil)
+        Button("Mark applied", action: onApply).buttonStyle(.bordered)
+        if match.applyUrl != nil {
+            Button("View job →") { openJob() }.buttonStyle(.bordered)
+        }
+        if let status = match.appStatus {
+            Text(status).font(.caption).foregroundStyle(Palette.brand)
+        }
     }
 }
 

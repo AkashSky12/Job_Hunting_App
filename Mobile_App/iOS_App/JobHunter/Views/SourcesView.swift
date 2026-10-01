@@ -4,11 +4,41 @@ struct SourcesView: View {
     @EnvironmentObject var vm: AppViewModel
     @State private var query = ""
     @State private var location = ""
+    @State private var keywords = ""
+    @State private var exclude = ""
     @Environment(\.openURL) private var openURL
 
     var body: some View {
         NavigationStack {
             List {
+                Section {
+                    TextField("Keywords, comma-separated", text: $keywords)
+                    TextField("Exclude e.g. intern, staff", text: $exclude)
+                    Button("Run auto-search") {
+                        vm.autoSearch(keywords: keywords, exclude: exclude, location: location)
+                    }
+                    .tint(Palette.brand)
+                    .disabled(vm.loading || keywords.trimmingCharacters(in: .whitespaces).isEmpty)
+                    if let r = vm.autoSearchResult {
+                        ForEach(r.perBoard.keys.sorted(), id: \.self) { board in
+                            HStack {
+                                Text(board).font(.subheadline)
+                                Spacer()
+                                if r.errors[board] != nil {
+                                    Text("failed").font(.subheadline).foregroundStyle(.red)
+                                } else {
+                                    Text("\(r.perBoard[board] ?? 0)").font(.subheadline).foregroundStyle(Palette.brand)
+                                }
+                            }
+                        }
+                    }
+                } header: {
+                    Text("Auto-search")
+                } footer: {
+                    Text("Searches company boards on Greenhouse, Lever and Ashby (ATS_BOARDS on the server). Uses the location below.")
+                }
+                .listRowBackground(Palette.surface.opacity(0.6))
+
                 Section {
                     TextField("Role e.g. python developer", text: $query)
                     TextField("Location e.g. bangalore", text: $location)

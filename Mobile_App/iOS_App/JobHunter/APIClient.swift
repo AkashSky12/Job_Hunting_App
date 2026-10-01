@@ -78,6 +78,13 @@ struct APIClient {
     @discardableResult
     func runMatch() async throws -> MatchResponse { try await post("api/match") }
 
+    func autoSearch(_ req: AutoSearchRequest) async throws -> AutoSearchResponse {
+        try await post("api/jobs/auto-search", body: req)
+    }
+    func autoApply(jobId: String) async throws -> AutoApplyResponse {
+        try await post("api/applications/auto-apply", body: AutoApplyRequest(jobId: jobId))
+    }
+
     @discardableResult
     func apply(jobId: String) async throws -> [String: AnyCodable] {
         try await post("api/applications", body: ["job_id": jobId])

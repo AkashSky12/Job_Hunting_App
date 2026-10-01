@@ -6,6 +6,9 @@ token.json
 # Local database
 jobhunter.db
 
+# Auto-apply screenshots (contain personal data)
+artifacts/
+
 # Python
 .venv/
 __pycache__/

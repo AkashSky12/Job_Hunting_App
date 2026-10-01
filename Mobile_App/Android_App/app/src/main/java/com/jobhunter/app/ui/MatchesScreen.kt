@@ -118,6 +118,7 @@ fun MatchesScreen(vm: AppViewModel, state: UiState) {
                 match = m,
                 isRemote = isRemote(m),
                 onApply = { vm.applyToJob(m.id) },
+                onAutoFill = { vm.autoApply(m.id) },
                 onView = {
                     m.applyUrl?.let {
                         runCatching {
@@ -142,7 +143,13 @@ private fun formatSalary(min: Int?, max: Int?): String? {
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun MatchCard(match: Match, isRemote: Boolean, onApply: () -> Unit, onView: () -> Unit) {
+private fun MatchCard(
+    match: Match,
+    isRemote: Boolean,
+    onApply: () -> Unit,
+    onAutoFill: () -> Unit,
+    onView: () -> Unit,
+) {
     val pct = (match.score * 100).toInt().coerceIn(0, 100)
     val initials = (match.company ?: "?").trim().take(2).uppercase()
     val salary = formatSalary(match.salaryMin, match.salaryMax)
@@ -191,15 +198,21 @@ private fun MatchCard(match: Match, isRemote: Boolean, onApply: () -> Unit, onVi
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
-            Row(
+            FlowRow(
                 Modifier.padding(top = 12.dp),
                 horizontalArrangement = Arrangement.spacedBy(10.dp),
-                verticalAlignment = Alignment.CenterVertically,
+                verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                Button(onClick = onApply, shape = RoundedCornerShape(12.dp)) { Text("Auto-apply") }
+                Button(onClick = onAutoFill, enabled = match.applyUrl != null, shape = RoundedCornerShape(12.dp)) { Text("Auto-fill") }
+                OutlinedButton(onClick = onApply, shape = RoundedCornerShape(12.dp)) { Text("Mark applied") }
                 OutlinedButton(onClick = onView, shape = RoundedCornerShape(12.dp)) { Text("View job →") }
                 match.appStatus?.let {
-                    Text(it, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.primary)
+                    Text(
+                        it,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.align(Alignment.CenterVertically),
+                    )
                 }
             }
         }

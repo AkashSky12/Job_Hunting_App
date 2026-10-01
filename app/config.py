@@ -82,6 +82,24 @@ class Settings:
         default_factory=lambda: os.environ.get("GMAIL_TOKEN_PATH", str(BASE_DIR / "token.json"))
     )
 
+    # Auto-search: public ATS boards as "<greenhouse|lever|ashby>:<slug>", comma-separated.
+    ats_boards: list[str] = field(
+        default_factory=lambda: [
+            s.strip() for s in os.environ.get("ATS_BOARDS", "").split(",") if s.strip()
+        ]
+    )
+
+    # Auto-apply: details not present in the parsed CV.
+    resume_path: str | None = field(default_factory=lambda: os.environ.get("RESUME_PATH") or None)
+    applicant_location: str = field(default_factory=lambda: os.environ.get("APPLICANT_LOCATION", ""))
+    applicant_linkedin: str = field(default_factory=lambda: os.environ.get("APPLICANT_LINKEDIN", ""))
+    applicant_github: str = field(default_factory=lambda: os.environ.get("APPLICANT_GITHUB", ""))
+    applicant_portfolio: str = field(default_factory=lambda: os.environ.get("APPLICANT_PORTFOLIO", ""))
+    # Headed (False) opens a visible browser on the backend host for review; use True in Docker.
+    autoapply_headless: bool = field(
+        default_factory=lambda: os.environ.get("AUTOAPPLY_HEADLESS", "false").lower() in ("1", "true", "yes")
+    )
+
     @property
     def ai_enabled(self) -> bool:
         return bool(self.openai_api_key)

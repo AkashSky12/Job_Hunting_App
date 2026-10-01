@@ -35,6 +35,12 @@ interface ApiService {
     @POST("api/jobs/ingest")
     suspend fun ingest(): IngestResponse
 
+    @POST("api/jobs/auto-search")
+    suspend fun autoSearch(@Body req: AutoSearchRequest): AutoSearchResponse
+
+    @POST("api/applications/auto-apply")
+    suspend fun autoApply(@Body req: AutoApplyRequest): AutoApplyResponse
+
     @POST("api/match")
     suspend fun runMatch(): MatchResponse
 

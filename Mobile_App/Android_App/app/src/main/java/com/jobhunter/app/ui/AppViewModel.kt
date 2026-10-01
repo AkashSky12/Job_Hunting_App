@@ -6,6 +6,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.jobhunter.app.data.Application
 import com.jobhunter.app.data.ApplyRequest
+import com.jobhunter.app.data.AutoApplyRequest
+import com.jobhunter.app.data.AutoSearchRequest
+import com.jobhunter.app.data.AutoSearchResponse
 import com.jobhunter.app.data.ClassifyRequest
 import com.jobhunter.app.data.ClassifyResult
 import com.jobhunter.app.data.JobSource
@@ -30,6 +33,7 @@ data class UiState(
     val applications: List<Application> = emptyList(),
     val profile: Profile? = null,
     val sources: List<JobSource> = emptyList(),
+    val autoSearch: AutoSearchResponse? = null,
 )
 
 class AppViewModel : ViewModel() {
@@ -54,6 +58,8 @@ class AppViewModel : ViewModel() {
     }
 
     fun clearMessage() = _state.update { it.copy(message = null) }
+
+    private fun splitTerms(s: String) = s.split(',').map { it.trim() }.filter { it.isNotEmpty() }
 
     fun loadOverview() = launch {
         val stats = api.stats()
@@ -80,6 +86,23 @@ class AppViewModel : ViewModel() {
     fun ingest() = launch {
         val r = api.ingest()
         _state.update { it.copy(message = "Ingested ${r.ingested} jobs") }
+    }
+
+    fun autoSearch(keywords: String, exclude: String, location: String) = launch {
+        val kw = splitTerms(keywords)
+        if (kw.isEmpty()) {
+            _state.update { it.copy(message = "Enter at least one keyword") }
+            return@launch
+        }
+        val r = api.autoSearch(AutoSearchRequest(kw, splitTerms(exclude), location.trim().ifEmpty { null }))
+        val failed = if (r.errors.isEmpty()) "" else " (${r.errors.size} board(s) failed)"
+        _state.update { it.copy(autoSearch = r, message = "Auto-search stored ${r.ingested} jobs$failed") }
+    }
+
+    fun autoApply(jobId: String) = launch {
+        val r = api.autoApply(AutoApplyRequest(jobId))
+        val where = if (r.headless) "in the background" else "in a browser on your computer"
+        _state.update { it.copy(message = "Pre-filling application $where. Review and submit there.") }
     }
 
     fun runMatching() = launch {

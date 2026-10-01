@@ -5,17 +5,21 @@ and an optional OpenAI key for higher-quality parsing/matching.
 """
 from __future__ import annotations
 
+import asyncio
 import json
+import logging
 from pathlib import Path
 
-from fastapi import FastAPI, File, HTTPException, UploadFile
+from fastapi import BackgroundTasks, FastAPI, File, HTTPException, UploadFile
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
-from . import cv_parser, email_sync, jobs, matcher, sources
+from . import autoapply, autosearch, cv_parser, email_sync, jobs, matcher, sources
 from .config import settings
 from .db import get_conn, init_db, row_to_dict
+
+log = logging.getLogger(__name__)
 
 STATIC_DIR = Path(__file__).resolve().parent / "static"
 
@@ -83,6 +87,32 @@ def ingest_jobs():
         "ok": True,
         "ingested": result["total"],
         "per_source": result["per_source"],
+        "errors": result["errors"],
+    }
+
+
+class AutoSearchRequest(BaseModel):
+    keywords: list[str] = Field(min_length=1, max_length=20)
+    exclude: list[str] = Field(default_factory=list, max_length=20)
+    location: str | None = None
+    boards: list[str] | None = Field(default=None, max_length=100)
+
+
+@app.post("/api/jobs/auto-search")
+async def auto_search(req: AutoSearchRequest):
+    """Keyword search across public Greenhouse/Lever/Ashby boards; stores hits."""
+    try:
+        boards = [autosearch.Board.parse(b) for b in req.boards] if req.boards else None
+        engine = autosearch.AutoSearch(boards)
+        if not engine.boards:
+            raise ValueError("No boards configured. Set ATS_BOARDS or pass `boards`.")
+        result = await engine.search_and_store(req.keywords, exclude=req.exclude, location=req.location)
+    except ValueError as exc:
+        raise HTTPException(400, str(exc))
+    return {
+        "ok": True,
+        "ingested": result["ingested"],
+        "per_board": result["per_board"],
         "errors": result["errors"],
     }
 
@@ -163,6 +193,45 @@ def create_application(req: ApplyRequest):
             (req.job_id, cover, event),
         )
     return {"ok": True, "cover_letter": cover}
+
+
+class AutoApplyRequest(BaseModel):
+    job_id: str
+    submit: bool = False
+
+
+_auto_apply_lock = asyncio.Lock()
+
+
+async def _run_auto_apply(engine: "autoapply.AutoApplyEngine", job_id: str, url: str, submit: bool) -> None:
+    async with _auto_apply_lock:
+        try:
+            result = await engine.apply(url, submit=submit, keep_open=not engine.headless)
+        except Exception:
+            log.exception("Auto-apply crashed for %s", job_id)
+            return
+        await asyncio.to_thread(autoapply.record_application, job_id, result)
+
+
+@app.post("/api/applications/auto-apply", status_code=202)
+async def auto_apply(req: AutoApplyRequest, background: BackgroundTasks):
+    """Pre-fill the job's application form in a browser on the backend host."""
+    with get_conn() as conn:
+        job = conn.execute("SELECT apply_url FROM jobs WHERE id = ?", (req.job_id,)).fetchone()
+    if not job or not job["apply_url"]:
+        raise HTTPException(404, "Job not found or has no apply URL")
+    if not settings.resume_path:
+        raise HTTPException(400, "Set RESUME_PATH on the backend to enable auto-apply.")
+    if _auto_apply_lock.locked():
+        raise HTTPException(409, "Another auto-apply session is in progress.")
+    try:
+        engine = autoapply.AutoApplyEngine(
+            autoapply.ApplicantProfile.from_db(), settings.resume_path, headless=settings.autoapply_headless
+        )
+    except (RuntimeError, ValueError, FileNotFoundError) as exc:
+        raise HTTPException(400, str(exc))
+    background.add_task(_run_auto_apply, engine, req.job_id, job["apply_url"], req.submit)
+    return {"ok": True, "started": True, "headless": engine.headless}
 
 
 @app.patch("/api/applications/status")

@@ -32,6 +32,8 @@ import com.jobhunter.app.data.JobSource
 fun SourcesScreen(vm: AppViewModel, state: UiState) {
     var query by remember { mutableStateOf("") }
     var location by remember { mutableStateOf("") }
+    var keywords by remember { mutableStateOf("") }
+    var exclude by remember { mutableStateOf("") }
     val context = LocalContext.current
 
     LaunchedEffect(Unit) { vm.loadSources() }
@@ -40,6 +42,45 @@ fun SourcesScreen(vm: AppViewModel, state: UiState) {
         modifier = Modifier.fillMaxSize().padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
+        item { Text("Auto-search", style = MaterialTheme.typography.headlineSmall) }
+        item {
+            GlassCard {
+                Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                    Text(
+                        "Searches company boards on Greenhouse, Lever and Ashby (ATS_BOARDS on the server).",
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    OutlinedTextField(
+                        value = keywords, onValueChange = { keywords = it },
+                        label = { Text("Keywords, comma-separated") },
+                        modifier = Modifier.fillMaxWidth(), singleLine = true,
+                    )
+                    OutlinedTextField(
+                        value = exclude, onValueChange = { exclude = it },
+                        label = { Text("Exclude e.g. intern, staff") },
+                        modifier = Modifier.fillMaxWidth(), singleLine = true,
+                    )
+                    Button(
+                        onClick = { vm.autoSearch(keywords, exclude, location) },
+                        enabled = !state.loading && keywords.isNotBlank(),
+                        modifier = Modifier.fillMaxWidth(),
+                    ) { Text("Run auto-search") }
+                    state.autoSearch?.let { r ->
+                        r.perBoard.forEach { (board, count) ->
+                            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                                Text(board, style = MaterialTheme.typography.bodyMedium)
+                                Text(
+                                    r.errors[board]?.let { "failed" } ?: "$count",
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    color = if (board in r.errors) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.primary,
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+        }
         item { Text("Job sources", style = MaterialTheme.typography.headlineSmall) }
         item {
             OutlinedTextField(
